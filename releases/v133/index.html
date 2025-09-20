@@ -1,0 +1,190 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><!-- Page Metadata --><link rel="canonical" href="https://example.com/releases/v133/"><meta name="description" content="初期の実用版 - 基本機能の確立と安定性向上"><!-- OpenGraph Tags --><meta property="og:title" content="DictSQLite v1.3.3"><meta property="og:type" content="website"><meta property="og:url" content="https://example.com/releases/v133/"><meta property="og:locale" content="en"><meta property="og:description" content="初期の実用版 - 基本機能の確立と安定性向上"><meta property="og:site_name" content="DictSQLite"><meta property="og:image" content="/_astro/starlog-placeholder-1.D1Ad2KDX.jpg"><meta property="og:image:alt" content="Astro ロゴ全体"><!-- Twitter Tags --><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site"><meta name="twitter:title" content="DictSQLite v1.3.3"><meta name="twitter:description" content="初期の実用版 - 基本機能の確立と安定性向上"><meta name="twitter:image" content="/_astro/starlog-placeholder-1.D1Ad2KDX.jpg"><meta name="twitter:image:alt" content="Astro ロゴ全体"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Source+Code+Pro&display=swap" rel="stylesheet"><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="animate"><script type="module" src="/_astro/ClientRouter.astro_astro_type_script_index_0_lang.B3vRBseb.js"></script><link rel="stylesheet" href="/_astro/index.WEhioEny.css">
+<style>time[data-astro-cid-baakmyjh]{display:block}@keyframes astroFadeInOut{0%{opacity:1}to{opacity:0}}@keyframes astroFadeIn{0%{opacity:0;mix-blend-mode:plus-lighter}to{opacity:1;mix-blend-mode:plus-lighter}}@keyframes astroFadeOut{0%{opacity:1;mix-blend-mode:plus-lighter}to{opacity:0;mix-blend-mode:plus-lighter}}@keyframes astroSlideFromRight{0%{transform:translate(100%)}}@keyframes astroSlideFromLeft{0%{transform:translate(-100%)}}@keyframes astroSlideToRight{to{transform:translate(100%)}}@keyframes astroSlideToLeft{to{transform:translate(-100%)}}@media (prefers-reduced-motion){::view-transition-group(*),::view-transition-old(*),::view-transition-new(*){animation:none!important}[data-astro-transition-scope]{animation:none!important}}
+</style><style>[data-astro-transition-scope="astro-jpx3f7vy-1"] { view-transition-name: post; }@layer astro { ::view-transition-old(post) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }::view-transition-new(post) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back]::view-transition-old(post) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back]::view-transition-new(post) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; } }[data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-jpx3f7vy-1"],
+			[data-astro-transition-fallback="old"][data-astro-transition-scope="astro-jpx3f7vy-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-jpx3f7vy-1"],
+			[data-astro-transition-fallback="new"][data-astro-transition-scope="astro-jpx3f7vy-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back][data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-jpx3f7vy-1"],
+			[data-astro-transition=back][data-astro-transition-fallback="old"][data-astro-transition-scope="astro-jpx3f7vy-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back][data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-jpx3f7vy-1"],
+			[data-astro-transition=back][data-astro-transition-fallback="new"][data-astro-transition-scope="astro-jpx3f7vy-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }</style></head><body> <div class="glow"></div> <header data-astro-cid-3ef6ksr2> <nav data-astro-cid-3ef6ksr2> <h2 id="site_title" data-astro-cid-3ef6ksr2> <a href="/" data-astro-cid-3ef6ksr2> <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" data-astro-cid-3ef6ksr2><path fill="url(#a)" fill-rule="evenodd" d="M.654 3.276C0 4.56 0 6.24 0 9.6v4.8c0 3.36 0 5.04.654 6.324a6 6 0 0 0 2.622 2.622C4.56 24 6.24 24 9.6 24h4.8c3.36 0 5.04 0 6.324-.654a6 6 0 0 0 2.622-2.622C24 19.44 24 17.76 24 14.4V9.6c0-3.36 0-5.04-.654-6.324A6 6 0 0 0 20.724.654C19.44 0 17.76 0 14.4 0H9.6C6.24 0 4.56 0 3.276.654A6 6 0 0 0 .654 3.276Zm10.875 16.41a.5.5 0 0 0 .942 0l.628-1.754a8 8 0 0 1 4.833-4.833l1.754-.628a.5.5 0 0 0 0-.942l-1.754-.628A8 8 0 0 1 13.1 6.068l-.628-1.754a.5.5 0 0 0-.942 0l-.628 1.754A8 8 0 0 1 6.068 10.9l-1.754.628a.5.5 0 0 0 0 .942l1.754.628a8 8 0 0 1 4.833 4.833l.628 1.754Z" clip-rule="evenodd" data-astro-cid-3ef6ksr2></path><path stroke="url(#b)" stroke-opacity=".5" stroke-width=".5" d="M.25 9.6c0-1.684 0-2.932.08-3.92.081-.985.24-1.69.547-2.29A5.75 5.75 0 0 1 3.39.877C3.99.57 4.695.41 5.68.33 6.668.25 7.916.25 9.6.25h4.8c1.684 0 2.932 0 3.92.08.985.081 1.69.24 2.29.547a5.75 5.75 0 0 1 2.513 2.513c.306.6.466 1.305.546 2.29.08.988.081 2.236.081 3.92v4.8c0 1.684 0 2.932-.08 3.92-.081.985-.24 1.69-.547 2.29a5.75 5.75 0 0 1-2.513 2.513c-.6.306-1.305.466-2.29.546-.988.08-2.236.081-3.92.081H9.6c-1.684 0-2.932 0-3.92-.08-.985-.081-1.69-.24-2.29-.547A5.75 5.75 0 0 1 .877 20.61C.57 20.01.41 19.305.33 18.32.25 17.332.25 16.084.25 14.4V9.6Zm11.044 10.17c.237.663 1.175.663 1.412 0l.628-1.753a7.75 7.75 0 0 1 4.683-4.683l1.753-.628c.663-.237.663-1.175 0-1.412l-1.753-.628a7.75 7.75 0 0 1-4.683-4.683l-.628-1.753c-.237-.663-1.175-.663-1.412 0l-.628 1.753a7.75 7.75 0 0 1-4.683 4.683l-1.753.628c-.663.237-.663 1.175 0 1.412l1.753.628a7.75 7.75 0 0 1 4.683 4.683l.628 1.753Z" data-astro-cid-3ef6ksr2></path><defs data-astro-cid-3ef6ksr2><radialGradient id="a" cx="0" cy="0" r="1" gradientTransform="rotate(-40.136 32.164 11.75) scale(33.3542)" gradientUnits="userSpaceOnUse" data-astro-cid-3ef6ksr2><stop offset=".639" stop-color="#9818E7" data-astro-cid-3ef6ksr2></stop><stop offset="1" stop-color="#DF7F4F" data-astro-cid-3ef6ksr2></stop></radialGradient><linearGradient id="b" x1="12" x2="12" y1="0" y2="24" gradientUnits="userSpaceOnUse" data-astro-cid-3ef6ksr2><stop stop-color="#fff" data-astro-cid-3ef6ksr2></stop><stop offset="1" stop-color="#fff" stop-opacity="0" data-astro-cid-3ef6ksr2></stop></linearGradient></defs></svg> DictSQLite </a> </h2> <div class="links" data-astro-cid-3ef6ksr2> <a href="mailto:support@disnana.com" data-astro-cid-3ef6ksr2>お問い合わせ</a> </div> </nav> </header>  <div class="post single" data-astro-transition-persist="post" data-astro-transition-scope="astro-jpx3f7vy-1"> <div class="version_wrapper"> <div class="version_info"> <div class="version_number">1.3.3</div> <time datetime="2025-08-01T00:00:00.000Z" class="date astro-baakmyjh" data-astro-cid-baakmyjh> Aug 1, 2025 </time>  </div> </div> <div class="content">  <h1 id="dictsqlite-v133">DictSQLite v1.3.3</h1>
+<p><strong>リリース日</strong>: 2025年8月1日（推定）<br>
+<strong>タイプ</strong>: パッチリリース</p>
+<h2 id="️-基本機能の確立">🏗️ 基本機能の確立</h2>
+<h3 id="-コア機能">💾 コア機能</h3>
+<ul>
+<li><strong>辞書風インターフェース</strong>: SQLiteを辞書のように操作する基本機能</li>
+<li><strong>キー・バリュー操作</strong>: 基本的なget/set/delete操作</li>
+<li><strong>データ永続化</strong>: 自動的なSQLiteファイルへの保存</li>
+</ul>
+<h3 id="-基本api">🔧 基本API</h3>
+<ul>
+<li><strong><code>__getitem__</code></strong> / <strong><code>__setitem__</code></strong>: 辞書風のアクセス</li>
+<li><strong><code>__delitem__</code></strong>: キーの削除</li>
+<li><strong><code>__contains__</code></strong>: キー存在確認</li>
+<li><strong><code>keys()</code></strong> / <strong><code>values()</code></strong> / <strong><code>items()</code></strong>: 辞書メソッド</li>
+</ul>
+<h2 id="-使用方法">📖 使用方法</h2>
+<h3 id="基本的な操作">基本的な操作</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#F97583">from</span><span style="color:#E1E4E8"> dictsqlite </span><span style="color:#F97583">import</span><span style="color:#E1E4E8"> DictSQLite</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># データベースファイルの作成</span></span>
+<span class="line"><span style="color:#E1E4E8">db </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> DictSQLite(</span><span style="color:#9ECBFF">'mydata.db'</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># 基本的なデータ操作</span></span>
+<span class="line"><span style="color:#E1E4E8">db[</span><span style="color:#9ECBFF">'name'</span><span style="color:#E1E4E8">] </span><span style="color:#F97583">=</span><span style="color:#9ECBFF"> 'Alice'</span></span>
+<span class="line"><span style="color:#E1E4E8">db[</span><span style="color:#9ECBFF">'age'</span><span style="color:#E1E4E8">] </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> 30</span></span>
+<span class="line"><span style="color:#E1E4E8">db[</span><span style="color:#9ECBFF">'active'</span><span style="color:#E1E4E8">] </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> True</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># データの読み取り</span></span>
+<span class="line"><span style="color:#79B8FF">print</span><span style="color:#E1E4E8">(db[</span><span style="color:#9ECBFF">'name'</span><span style="color:#E1E4E8">])  </span><span style="color:#6A737D"># 'Alice'</span></span>
+<span class="line"><span style="color:#79B8FF">print</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">'age'</span><span style="color:#F97583"> in</span><span style="color:#E1E4E8"> db)  </span><span style="color:#6A737D"># True</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># データの削除</span></span>
+<span class="line"><span style="color:#F97583">del</span><span style="color:#E1E4E8"> db[</span><span style="color:#9ECBFF">'active'</span><span style="color:#E1E4E8">]</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># すべてのキーの取得</span></span>
+<span class="line"><span style="color:#F97583">for</span><span style="color:#E1E4E8"> key </span><span style="color:#F97583">in</span><span style="color:#E1E4E8"> db.keys():</span></span>
+<span class="line"><span style="color:#79B8FF">    print</span><span style="color:#E1E4E8">(</span><span style="color:#F97583">f</span><span style="color:#9ECBFF">"</span><span style="color:#79B8FF">{</span><span style="color:#E1E4E8">key</span><span style="color:#79B8FF">}</span><span style="color:#9ECBFF">: </span><span style="color:#79B8FF">{</span><span style="color:#E1E4E8">db[key]</span><span style="color:#79B8FF">}</span><span style="color:#9ECBFF">"</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># データベースのクローズ</span></span>
+<span class="line"><span style="color:#E1E4E8">db.close()</span></span></code></pre>
+<h3 id="複合データの保存">複合データの保存</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#6A737D"># 辞書やリストの保存</span></span>
+<span class="line"><span style="color:#E1E4E8">db[</span><span style="color:#9ECBFF">'user_info'</span><span style="color:#E1E4E8">] </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#9ECBFF">    'name'</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">'Bob'</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#9ECBFF">    'hobbies'</span><span style="color:#E1E4E8">: [</span><span style="color:#9ECBFF">'reading'</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">'coding'</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">'music'</span><span style="color:#E1E4E8">],</span></span>
+<span class="line"><span style="color:#9ECBFF">    'address'</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#9ECBFF">        'city'</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">'Tokyo'</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#9ECBFF">        'zip'</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">'123-4567'</span></span>
+<span class="line"><span style="color:#E1E4E8">    }</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># ネストされたデータの取得</span></span>
+<span class="line"><span style="color:#E1E4E8">user </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> db[</span><span style="color:#9ECBFF">'user_info'</span><span style="color:#E1E4E8">]</span></span>
+<span class="line"><span style="color:#79B8FF">print</span><span style="color:#E1E4E8">(user[</span><span style="color:#9ECBFF">'address'</span><span style="color:#E1E4E8">][</span><span style="color:#9ECBFF">'city'</span><span style="color:#E1E4E8">])  </span><span style="color:#6A737D"># 'Tokyo'</span></span></code></pre>
+<h2 id="-技術的詳細">🔧 技術的詳細</h2>
+<h3 id="データ保存方式">データ保存方式</h3>
+<ul>
+<li><strong>Pickle serialization</strong>: Pythonオブジェクトの直接保存</li>
+<li><strong>SQLite backend</strong>: 信頼性の高いSQLiteデータベース</li>
+<li><strong>自動型変換</strong>: Python型の自動的な保存・復元</li>
+</ul>
+<h3 id="ファイル構造">ファイル構造</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="sql"><code><span class="line"><span style="color:#6A737D">-- 自動生成されるテーブル構造</span></span>
+<span class="line"><span style="color:#F97583">CREATE</span><span style="color:#F97583"> TABLE</span><span style="color:#B392F0"> IF</span><span style="color:#F97583"> NOT</span><span style="color:#F97583"> EXISTS</span><span style="color:#F97583"> data</span><span style="color:#E1E4E8"> (</span></span>
+<span class="line"><span style="color:#F97583">    key</span><span style="color:#F97583"> TEXT</span><span style="color:#F97583"> PRIMARY KEY</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#F97583">    value</span><span style="color:#E1E4E8"> BLOB</span></span>
+<span class="line"><span style="color:#E1E4E8">);</span></span></code></pre>
+<h3 id="エラーハンドリング">エラーハンドリング</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#6A737D"># キーが存在しない場合</span></span>
+<span class="line"><span style="color:#F97583">try</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#E1E4E8">    value </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> db[</span><span style="color:#9ECBFF">'nonexistent_key'</span><span style="color:#E1E4E8">]</span></span>
+<span class="line"><span style="color:#F97583">except</span><span style="color:#79B8FF"> KeyError</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#79B8FF">    print</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"キーが見つかりません"</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># より安全なアクセス</span></span>
+<span class="line"><span style="color:#E1E4E8">value </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> db.get(</span><span style="color:#9ECBFF">'maybe_key'</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">'default_value'</span><span style="color:#E1E4E8">)</span></span></code></pre>
+<h2 id="️-安定性と制限">🛡️ 安定性と制限</h2>
+<h3 id="安定した機能">安定した機能</h3>
+<ul>
+<li><strong>基本的なCRUD操作</strong>: 読み書き削除は安定</li>
+<li><strong>データ永続性</strong>: ファイル保存は確実</li>
+<li><strong>型サポート</strong>: 基本的なPython型をサポート</li>
+</ul>
+<h3 id="現在の制限">現在の制限</h3>
+<ul>
+<li><strong>並行アクセス</strong>: 複数プロセスからの同時アクセスは未対応</li>
+<li><strong>暗号化</strong>: データ暗号化機能なし</li>
+<li><strong>トランザクション</strong>: 高度なトランザクション機能なし</li>
+<li><strong>インデックス</strong>: 検索最適化機能なし</li>
+</ul>
+<h2 id="-パフォーマンス特性">📊 パフォーマンス特性</h2>
+<h3 id="適用範囲">適用範囲</h3>
+<ul>
+<li><strong>小〜中規模データ</strong>: 数千〜数万件のレコード</li>
+<li><strong>シンプルな用途</strong>: 設定ファイル、キャッシュ、簡単なデータ保存</li>
+<li><strong>単一プロセス</strong>: 一つのプロセスからのアクセス</li>
+</ul>
+<h3 id="ベンチマーク例">ベンチマーク例</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> time</span></span>
+<span class="line"><span style="color:#F97583">from</span><span style="color:#E1E4E8"> dictsqlite </span><span style="color:#F97583">import</span><span style="color:#E1E4E8"> DictSQLite</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># 基本的なパフォーマンステスト</span></span>
+<span class="line"><span style="color:#E1E4E8">db </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> DictSQLite(</span><span style="color:#9ECBFF">'test.db'</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># 書き込み性能</span></span>
+<span class="line"><span style="color:#E1E4E8">start </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> time.time()</span></span>
+<span class="line"><span style="color:#F97583">for</span><span style="color:#E1E4E8"> i </span><span style="color:#F97583">in</span><span style="color:#79B8FF"> range</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">1000</span><span style="color:#E1E4E8">):</span></span>
+<span class="line"><span style="color:#E1E4E8">    db[</span><span style="color:#F97583">f</span><span style="color:#9ECBFF">'key_</span><span style="color:#79B8FF">{</span><span style="color:#E1E4E8">i</span><span style="color:#79B8FF">}</span><span style="color:#9ECBFF">'</span><span style="color:#E1E4E8">] </span><span style="color:#F97583">=</span><span style="color:#F97583"> f</span><span style="color:#9ECBFF">'value_</span><span style="color:#79B8FF">{</span><span style="color:#E1E4E8">i</span><span style="color:#79B8FF">}</span><span style="color:#9ECBFF">'</span></span>
+<span class="line"><span style="color:#E1E4E8">write_time </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> time.time() </span><span style="color:#F97583">-</span><span style="color:#E1E4E8"> start</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># 読み込み性能</span></span>
+<span class="line"><span style="color:#E1E4E8">start </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> time.time()</span></span>
+<span class="line"><span style="color:#F97583">for</span><span style="color:#E1E4E8"> i </span><span style="color:#F97583">in</span><span style="color:#79B8FF"> range</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">1000</span><span style="color:#E1E4E8">):</span></span>
+<span class="line"><span style="color:#E1E4E8">    _ </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> db[</span><span style="color:#F97583">f</span><span style="color:#9ECBFF">'key_</span><span style="color:#79B8FF">{</span><span style="color:#E1E4E8">i</span><span style="color:#79B8FF">}</span><span style="color:#9ECBFF">'</span><span style="color:#E1E4E8">]</span></span>
+<span class="line"><span style="color:#E1E4E8">read_time </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> time.time() </span><span style="color:#F97583">-</span><span style="color:#E1E4E8"> start</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF">print</span><span style="color:#E1E4E8">(</span><span style="color:#F97583">f</span><span style="color:#9ECBFF">"書き込み: </span><span style="color:#79B8FF">{</span><span style="color:#E1E4E8">write_time</span><span style="color:#F97583">:.2f</span><span style="color:#79B8FF">}</span><span style="color:#9ECBFF">s, 読み込み: </span><span style="color:#79B8FF">{</span><span style="color:#E1E4E8">read_time</span><span style="color:#F97583">:.2f</span><span style="color:#79B8FF">}</span><span style="color:#9ECBFF">s"</span><span style="color:#E1E4E8">)</span></span></code></pre>
+<h2 id="-インストールと要件">🔧 インストールと要件</h2>
+<h3 id="インストール">インストール</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">pip</span><span style="color:#9ECBFF"> install</span><span style="color:#9ECBFF"> dictsqlite==</span><span style="color:#79B8FF">1.3.3</span></span></code></pre>
+<h3 id="依存関係">依存関係</h3>
+<ul>
+<li><strong>Python 3.7+</strong>: Python 3.7以上が必要</li>
+<li><strong>SQLite3</strong>: Pythonの標準ライブラリ（追加インストール不要）</li>
+</ul>
+<h2 id="-既知の問題">🔍 既知の問題</h2>
+<h3 id="制限事項">制限事項</h3>
+<ul>
+<li><strong>Large objects</strong>: 非常に大きなオブジェクトでの性能低下</li>
+<li><strong>Complex objects</strong>: 一部の複雑なオブジェクトで保存エラー</li>
+<li><strong>File locking</strong>: ファイルロック機能の不完全性</li>
+</ul>
+<h3 id="回避策">回避策</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#6A737D"># 大きなデータの分割保存</span></span>
+<span class="line"><span style="color:#E1E4E8">large_data </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> list</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">range</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">100000</span><span style="color:#E1E4E8">))</span></span>
+<span class="line"><span style="color:#E1E4E8">chunk_size </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> 1000</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">for</span><span style="color:#E1E4E8"> i, chunk_start </span><span style="color:#F97583">in</span><span style="color:#79B8FF"> enumerate</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">range</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">0</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">len</span><span style="color:#E1E4E8">(large_data), chunk_size)):</span></span>
+<span class="line"><span style="color:#E1E4E8">    chunk </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> large_data[chunk_start:chunk_start </span><span style="color:#F97583">+</span><span style="color:#E1E4E8"> chunk_size]</span></span>
+<span class="line"><span style="color:#E1E4E8">    db[</span><span style="color:#F97583">f</span><span style="color:#9ECBFF">'chunk_</span><span style="color:#79B8FF">{</span><span style="color:#E1E4E8">i</span><span style="color:#79B8FF">}</span><span style="color:#9ECBFF">'</span><span style="color:#E1E4E8">] </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> chunk</span></span></code></pre>
+<h2 id="-将来の計画">🚀 将来の計画</h2>
+<h3 id="次バージョンでの改善予定">次バージョンでの改善予定</h3>
+<ul>
+<li><strong>並行アクセス対応</strong>: ファイルロック機能</li>
+<li><strong>暗号化機能</strong>: データ保護オプション</li>
+<li><strong>パフォーマンス向上</strong>: より高速な操作</li>
+<li><strong>エラー処理</strong>: より詳細なエラー情報</li>
+</ul>
+<hr>
+<p>DictSQLite v1.3.3は、プロジェクトの基礎を築く重要な初期リリースです。シンプルで使いやすいAPIを提供し、将来の機能拡張への基盤を確立しています。</p>  </div> </div> <footer> <p>© 2025 Disnana. All rights reserved.</p> <div class="footer_links"> <a href="https://discord.gg/KzeHDrgwAz" target="_blank" rel="noopener noreferrer">Discord</a> <a href="https://x.com/PythonHaru" target="_blank" rel="noopener noreferrer">X</a> <a href="https://github.com/disnana/DictSQLite" target="_blank" rel="noopener noreferrer">GitHub</a> </div> </footer> </body></html>

@@ -1,0 +1,1211 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><!-- Page Metadata --><link rel="canonical" href="https://example.com/"><meta name="description" content="DictSQLiteの公式リリースノートです!"><!-- OpenGraph Tags --><meta property="og:title" content="DictSQLite"><meta property="og:type" content="website"><meta property="og:url" content="https://example.com/"><meta property="og:locale" content="en"><meta property="og:description" content="DictSQLiteの公式リリースノートです!"><meta property="og:site_name" content="DictSQLite"><!-- Twitter Tags --><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site"><meta name="twitter:title" content="DictSQLite"><meta name="twitter:description" content="DictSQLiteの公式リリースノートです!"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Source+Code+Pro&display=swap" rel="stylesheet"><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="animate"><script type="module" src="/_astro/ClientRouter.astro_astro_type_script_index_0_lang.B3vRBseb.js"></script><style>time[data-astro-cid-baakmyjh]{display:block}@keyframes astroFadeInOut{0%{opacity:1}to{opacity:0}}@keyframes astroFadeIn{0%{opacity:0;mix-blend-mode:plus-lighter}to{opacity:1;mix-blend-mode:plus-lighter}}@keyframes astroFadeOut{0%{opacity:1;mix-blend-mode:plus-lighter}to{opacity:0;mix-blend-mode:plus-lighter}}@keyframes astroSlideFromRight{0%{transform:translate(100%)}}@keyframes astroSlideFromLeft{0%{transform:translate(-100%)}}@keyframes astroSlideToRight{to{transform:translate(100%)}}@keyframes astroSlideToLeft{to{transform:translate(-100%)}}@media (prefers-reduced-motion){::view-transition-group(*),::view-transition-old(*),::view-transition-new(*){animation:none!important}[data-astro-transition-scope]{animation:none!important}}
+</style>
+<link rel="stylesheet" href="/_astro/index.WEhioEny.css"><style>[data-astro-transition-scope="astro-4xnpz4kg-1"] { view-transition-name: post; }@layer astro { ::view-transition-old(post) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }::view-transition-new(post) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back]::view-transition-old(post) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back]::view-transition-new(post) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; } }[data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-4xnpz4kg-1"],
+			[data-astro-transition-fallback="old"][data-astro-transition-scope="astro-4xnpz4kg-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-4xnpz4kg-1"],
+			[data-astro-transition-fallback="new"][data-astro-transition-scope="astro-4xnpz4kg-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back][data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-4xnpz4kg-1"],
+			[data-astro-transition=back][data-astro-transition-fallback="old"][data-astro-transition-scope="astro-4xnpz4kg-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back][data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-4xnpz4kg-1"],
+			[data-astro-transition=back][data-astro-transition-fallback="new"][data-astro-transition-scope="astro-4xnpz4kg-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }</style></head> <body> <div class="glow"></div> <header data-astro-cid-3ef6ksr2> <nav data-astro-cid-3ef6ksr2> <h2 id="site_title" data-astro-cid-3ef6ksr2> <a href="/" data-astro-cid-3ef6ksr2> <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" data-astro-cid-3ef6ksr2><path fill="url(#a)" fill-rule="evenodd" d="M.654 3.276C0 4.56 0 6.24 0 9.6v4.8c0 3.36 0 5.04.654 6.324a6 6 0 0 0 2.622 2.622C4.56 24 6.24 24 9.6 24h4.8c3.36 0 5.04 0 6.324-.654a6 6 0 0 0 2.622-2.622C24 19.44 24 17.76 24 14.4V9.6c0-3.36 0-5.04-.654-6.324A6 6 0 0 0 20.724.654C19.44 0 17.76 0 14.4 0H9.6C6.24 0 4.56 0 3.276.654A6 6 0 0 0 .654 3.276Zm10.875 16.41a.5.5 0 0 0 .942 0l.628-1.754a8 8 0 0 1 4.833-4.833l1.754-.628a.5.5 0 0 0 0-.942l-1.754-.628A8 8 0 0 1 13.1 6.068l-.628-1.754a.5.5 0 0 0-.942 0l-.628 1.754A8 8 0 0 1 6.068 10.9l-1.754.628a.5.5 0 0 0 0 .942l1.754.628a8 8 0 0 1 4.833 4.833l.628 1.754Z" clip-rule="evenodd" data-astro-cid-3ef6ksr2></path><path stroke="url(#b)" stroke-opacity=".5" stroke-width=".5" d="M.25 9.6c0-1.684 0-2.932.08-3.92.081-.985.24-1.69.547-2.29A5.75 5.75 0 0 1 3.39.877C3.99.57 4.695.41 5.68.33 6.668.25 7.916.25 9.6.25h4.8c1.684 0 2.932 0 3.92.08.985.081 1.69.24 2.29.547a5.75 5.75 0 0 1 2.513 2.513c.306.6.466 1.305.546 2.29.08.988.081 2.236.081 3.92v4.8c0 1.684 0 2.932-.08 3.92-.081.985-.24 1.69-.547 2.29a5.75 5.75 0 0 1-2.513 2.513c-.6.306-1.305.466-2.29.546-.988.08-2.236.081-3.92.081H9.6c-1.684 0-2.932 0-3.92-.08-.985-.081-1.69-.24-2.29-.547A5.75 5.75 0 0 1 .877 20.61C.57 20.01.41 19.305.33 18.32.25 17.332.25 16.084.25 14.4V9.6Zm11.044 10.17c.237.663 1.175.663 1.412 0l.628-1.753a7.75 7.75 0 0 1 4.683-4.683l1.753-.628c.663-.237.663-1.175 0-1.412l-1.753-.628a7.75 7.75 0 0 1-4.683-4.683l-.628-1.753c-.237-.663-1.175-.663-1.412 0l-.628 1.753a7.75 7.75 0 0 1-4.683 4.683l-1.753.628c-.663.237-.663 1.175 0 1.412l1.753.628a7.75 7.75 0 0 1 4.683 4.683l.628 1.753Z" data-astro-cid-3ef6ksr2></path><defs data-astro-cid-3ef6ksr2><radialGradient id="a" cx="0" cy="0" r="1" gradientTransform="rotate(-40.136 32.164 11.75) scale(33.3542)" gradientUnits="userSpaceOnUse" data-astro-cid-3ef6ksr2><stop offset=".639" stop-color="#9818E7" data-astro-cid-3ef6ksr2></stop><stop offset="1" stop-color="#DF7F4F" data-astro-cid-3ef6ksr2></stop></radialGradient><linearGradient id="b" x1="12" x2="12" y1="0" y2="24" gradientUnits="userSpaceOnUse" data-astro-cid-3ef6ksr2><stop stop-color="#fff" data-astro-cid-3ef6ksr2></stop><stop offset="1" stop-color="#fff" stop-opacity="0" data-astro-cid-3ef6ksr2></stop></linearGradient></defs></svg> DictSQLite </a> </h2> <div class="links" data-astro-cid-3ef6ksr2> <a href="mailto:support@disnana.com" data-astro-cid-3ef6ksr2>お問い合わせ</a> </div> </nav> </header>   <main> <h1 class="page_title">更新履歴</h1> <hr> <ul class="posts" data-astro-transition-scope="astro-4xnpz4kg-1"> <li class="post"> <div class="version_wrapper"> <div class="version_info"> <a href="/releases/v188"> <div class="version_number">1.8.8</div> <time datetime="2025-09-20T00:00:00.000Z" class="date astro-baakmyjh" data-astro-cid-baakmyjh> Sep 20, 2025 </time>  </a> </div> </div> <div class="content"> <h1 id="dictsqlite-v188">DictSQLite v1.8.8</h1>
+<p><strong>リリース日</strong>: 2025年9月20日<br>
+<strong>タイプ</strong>: マイナーリリース</p>
+<h2 id="-新機能">🚀 新機能</h2>
+<h3 id="-json-モード実験的">📄 JSON モード（実験的）</h3>
+<ul>
+<li><strong>JSON モードの実装</strong>: 新しいJSONモードのテストバージョンを導入</li>
+<li><strong>Issue #16対応</strong>: <a href="https://github.com/disnana/DictSQLite/issues/16">https://github.com/disnana/DictSQLite/issues/16</a> の実装</li>
+<li><strong>データ形式の拡張</strong>: より柔軟なデータ保存形式のサポート</li>
+</ul>
+<h2 id="-技術的改善">🔧 技術的改善</h2>
+<h3 id="-ドキュメント更新">📝 ドキュメント更新</h3>
+<ul>
+<li><strong>AI生成ドキュメント</strong>: Gemini AIによる包括的なドキュメント更新</li>
+<li><strong>多言語対応</strong>: 日本語と英語でのドキュメント改善</li>
+<li><strong>Issue #28対応</strong>: <a href="https://github.com/disnana/DictSQLite/issues/28">https://github.com/disnana/DictSQLite/issues/28</a></li>
+<li><strong>注意</strong>: AI生成のため、開発者による確認が推奨されます</li>
+</ul>
+<h3 id="-型注釈修正">🔧 型注釈修正</h3>
+<ul>
+<li><strong>schema パラメータ</strong>: main.py のコンストラクタ引数の型注釈を修正
+<ul>
+<li><strong>修正前</strong>: <code>bool</code> (誤り)</li>
+<li><strong>修正後</strong>: <code>str | None</code> (正しい型)</li>
+</ul>
+</li>
+<li><strong>ドキュメント整合性</strong>: ドキュメント例との整合性を確保</li>
+</ul>
+<h3 id="-コード品質">🧹 コード品質</h3>
+<ul>
+<li><strong>Pylint警告修正</strong>: 複数のPylint警告に対応</li>
+<li><strong>コードスタイル</strong>: より一貫したコーディングスタイル</li>
+</ul>
+<h2 id="-使用方法">📖 使用方法</h2>
+<h3 id="基本的な使用変更なし">基本的な使用（変更なし）</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#F97583">from</span><span style="color:#E1E4E8"> dictsqlite </span><span style="color:#F97583">import</span><span style="color:#E1E4E8"> DictSQLite</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># 通常の使用</span></span>
+<span class="line"><span style="color:#E1E4E8">db </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> DictSQLite(</span><span style="color:#9ECBFF">'example.db'</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#E1E4E8">db[</span><span style="color:#9ECBFF">'key'</span><span style="color:#E1E4E8">] </span><span style="color:#F97583">=</span><span style="color:#9ECBFF"> 'value'</span></span></code></pre>
+<h3 id="新しいjson-モード実験的">新しいJSON モード（実験的）</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#6A737D"># JSON モードの使用（実験的）</span></span>
+<span class="line"><span style="color:#E1E4E8">db </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> DictSQLite(</span><span style="color:#9ECBFF">'data.db'</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">json_mode</span><span style="color:#F97583">=</span><span style="color:#79B8FF">True</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#E1E4E8">db[</span><span style="color:#9ECBFF">'complex_data'</span><span style="color:#E1E4E8">] </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#9ECBFF">    'nested'</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#9ECBFF">        'structure'</span><span style="color:#E1E4E8">: [</span><span style="color:#9ECBFF">'array'</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">'data'</span><span style="color:#E1E4E8">],</span></span>
+<span class="line"><span style="color:#9ECBFF">        'timestamp'</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">'2025-09-20'</span></span>
+<span class="line"><span style="color:#E1E4E8">    }</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<h3 id="スキーマ指定の正しい使用">スキーマ指定の正しい使用</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#6A737D"># 型注釈修正後の正しい使用</span></span>
+<span class="line"><span style="color:#E1E4E8">db </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> DictSQLite(</span><span style="color:#9ECBFF">'schema_db.db'</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">schema</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">'custom_schema.sql'</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#6A737D"># または</span></span>
+<span class="line"><span style="color:#E1E4E8">db </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> DictSQLite(</span><span style="color:#9ECBFF">'auto_db.db'</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">schema</span><span style="color:#F97583">=</span><span style="color:#79B8FF">None</span><span style="color:#E1E4E8">)  </span><span style="color:#6A737D"># デフォルト</span></span></code></pre>
+<h2 id="️-実験的機能について">⚠️ 実験的機能について</h2>
+<h3 id="json-モードの注意点">JSON モードの注意点</h3>
+<ul>
+<li><strong>テストバージョン</strong>: 現在はテスト段階の機能です</li>
+<li><strong>互換性</strong>: 今後のバージョンでAPIが変更される可能性があります</li>
+<li><strong>フィードバック</strong>: 使用感や問題をIssueで報告してください</li>
+</ul>
+<h2 id="-関連issue">🔗 関連Issue</h2>
+<ul>
+<li><strong>#16</strong>: <a href="https://github.com/disnana/DictSQLite/issues/16">JSON モード実装</a></li>
+<li><strong>#28</strong>: <a href="https://github.com/disnana/DictSQLite/issues/28">ドキュメント更新</a></li>
+</ul>
+<h2 id="-バグ修正">🐛 バグ修正</h2>
+<h3 id="型安全性の向上">型安全性の向上</h3>
+<ul>
+<li><strong>型注釈エラー</strong>: schema パラメータの型注釈を修正</li>
+<li><strong>IDE サポート</strong>: より良いコード補完とエラー検出</li>
+</ul>
+<h3 id="ドキュメント修正">ドキュメント修正</h3>
+<ul>
+<li><strong>例の整合性</strong>: コード例とAPIの整合性を確保</li>
+<li><strong>翻訳品質</strong>: 英語ドキュメントの品質向上（要確認）</li>
+</ul>
+<h2 id="-アップグレード">📦 アップグレード</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">pip</span><span style="color:#9ECBFF"> install</span><span style="color:#9ECBFF"> dictsqlite</span><span style="color:#79B8FF"> -U</span></span></code></pre>
+<h2 id="-開発者向け情報">💡 開発者向け情報</h2>
+<h3 id="ai生成コンテンツについて">AI生成コンテンツについて</h3>
+<p>このバージョンのドキュメントの一部はAIによって生成されています：</p>
+<ul>
+<li><strong>確認推奨</strong>: 開発者による内容確認が推奨されます</li>
+<li><strong>誤りの可能性</strong>: 翻訳や技術的な内容に誤りがある可能性があります</li>
+<li><strong>フィードバック</strong>: 問題を発見した場合はIssueで報告してください</li>
+</ul>
+<h3 id="コントリビューション">コントリビューション</h3>
+<ul>
+<li><strong>コードレビュー</strong>: AI生成ドキュメントの確認にご協力ください</li>
+<li><strong>JSON モードテスト</strong>: 新機能のテストとフィードバックをお願いします</li>
+</ul>
+<h2 id="-互換性">🔄 互換性</h2>
+<ul>
+<li><strong>後方互換性</strong>: 既存のAPIは変更されていません</li>
+<li><strong>新機能</strong>: オプションの新機能のみ追加</li>
+<li><strong>破壊的変更</strong>: なし</li>
+</ul>
+<hr>
+<p>このリリースは新機能の実験的導入とドキュメント品質の向上に重点を置いています。</p> </div> </li><li class="post"> <div class="version_wrapper"> <div class="version_info"> <a href="/releases/v187"> <div class="version_number">1.8.7</div> <time datetime="2025-09-20T00:00:00.000Z" class="date astro-baakmyjh" data-astro-cid-baakmyjh> Sep 20, 2025 </time>  </a> </div> </div> <div class="content"> <h1 id="dictsqlite-v187">DictSQLite v1.8.7</h1>
+<p><strong>リリース日</strong>: 2025年9月20日<br>
+<strong>タイプ</strong>: パッチリリース（最終安定版）</p>
+<h2 id="-pypi関連の修正">📦 PyPI関連の修正</h2>
+<h3 id="-パッケージング改善">🔧 パッケージング改善</h3>
+<ul>
+<li><strong>PyPI配布の修正</strong>: パッケージ配布における問題を解決</li>
+<li><strong>メタデータの最適化</strong>: より正確なプロジェクト情報</li>
+<li><strong>依存関係の明確化</strong>: requirements.txt の整備</li>
+</ul>
+<h3 id="-パッケージ情報">📋 パッケージ情報</h3>
+<ul>
+<li><strong>正確なバージョン表示</strong>: バージョン番号の一貫性確保</li>
+<li><strong>分類の改善</strong>: PyPI カテゴリの適切な設定</li>
+<li><strong>キーワードの最適化</strong>: 検索性の向上</li>
+</ul>
+<h2 id="-ライセンス関連">📜 ライセンス関連</h2>
+<h3 id="-ライセンス更新">🔄 ライセンス更新</h3>
+<ul>
+<li><strong>MIT License への明確化</strong>: 標準MITライセンスへの完全移行</li>
+<li><strong>README内記述の修正</strong>: ライセンス情報の統一</li>
+<li><strong>法的文書の整備</strong>: より明確な使用条件</li>
+</ul>
+<h3 id="-ライセンス条項">📝 ライセンス条項</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>MIT License</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>Copyright (c) 2024 Disnana</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>本ソフトウェアは、MIT ライセンスの下で配布されます。</span></span>
+<span class="line"><span>コードの自由な使用・改変が可能ですが、元の作成者への</span></span>
+<span class="line"><span>適切なクレジット表示が必要です。</span></span></code></pre>
+<h2 id="-技術的改善">🔧 技術的改善</h2>
+<h3 id="-バグ修正">🐛 バグ修正</h3>
+<ul>
+<li><strong>pytest関連の修正</strong>: テストフレームワークの安定性向上</li>
+<li><strong>assert文の改善</strong>: <code>assert isinstance(s, str) and len(s) == 5</code> の安全な例外チェックへの変更</li>
+<li><strong>セキュリティ上の改善</strong>: より明示的な例外処理の実装</li>
+</ul>
+<h3 id="-コード品質">🧹 コード品質</h3>
+<ul>
+<li><strong>Pylint警告の最終対応</strong>: 残っていた警告の解決</li>
+<li><strong>コードスタイルの統一</strong>: 最終的なフォーマット調整</li>
+<li><strong>ドキュメント文字列の改善</strong>: より詳細なAPI文書</li>
+</ul>
+<h2 id="-最終機能セット">🚀 最終機能セット</h2>
+<h3 id="-コア機能">💎 コア機能</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#F97583">from</span><span style="color:#E1E4E8"> dictsqlite </span><span style="color:#F97583">import</span><span style="color:#E1E4E8"> DictSQLite, expiring_dict, safe_pickle</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># 基本的なデータベース操作</span></span>
+<span class="line"><span style="color:#E1E4E8">db </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> DictSQLite(</span><span style="color:#9ECBFF">'final.db'</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#E1E4E8">db[</span><span style="color:#9ECBFF">'version'</span><span style="color:#E1E4E8">] </span><span style="color:#F97583">=</span><span style="color:#9ECBFF"> '1.8.7'</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># テーブル機能</span></span>
+<span class="line"><span style="color:#E1E4E8">users </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> db.table(</span><span style="color:#9ECBFF">'users'</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#E1E4E8">users[</span><span style="color:#9ECBFF">'alice'</span><span style="color:#E1E4E8">] </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> {</span><span style="color:#9ECBFF">'name'</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">'Alice'</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">'version'</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">'1.8.7'</span><span style="color:#E1E4E8">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># 暗号化サポート</span></span>
+<span class="line"><span style="color:#E1E4E8">encrypted_db </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> DictSQLite(</span><span style="color:#9ECBFF">'secure.db'</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">password</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">'secret123'</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># 期限付きデータ</span></span>
+<span class="line"><span style="color:#E1E4E8">expiring_cache </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> expiring_dict(</span><span style="color:#79B8FF">3600</span><span style="color:#E1E4E8">)  </span><span style="color:#6A737D"># 1時間</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># 安全なPickle処理</span></span>
+<span class="line"><span style="color:#F97583">from</span><span style="color:#E1E4E8"> dictsqlite.modules.safe_pickle </span><span style="color:#F97583">import</span><span style="color:#E1E4E8"> SafePolicy</span></span>
+<span class="line"><span style="color:#E1E4E8">policy </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> SafePolicy()</span></span></code></pre>
+<h3 id="-トランザクション">🔄 トランザクション</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#6A737D"># 安全なトランザクション処理</span></span>
+<span class="line"><span style="color:#F97583">with</span><span style="color:#E1E4E8"> db.transaction() </span><span style="color:#F97583">as</span><span style="color:#E1E4E8"> txn:</span></span>
+<span class="line"><span style="color:#E1E4E8">    txn[</span><span style="color:#9ECBFF">'key1'</span><span style="color:#E1E4E8">] </span><span style="color:#F97583">=</span><span style="color:#9ECBFF"> 'value1'</span></span>
+<span class="line"><span style="color:#E1E4E8">    txn[</span><span style="color:#9ECBFF">'key2'</span><span style="color:#E1E4E8">] </span><span style="color:#F97583">=</span><span style="color:#9ECBFF"> 'value2'</span></span>
+<span class="line"><span style="color:#6A737D">    # 自動コミット or ロールバック</span></span></code></pre>
+<h2 id="-パフォーマンス指標">📊 パフォーマンス指標</h2>
+<h3 id="-最終性能">⚡ 最終性能</h3>
+<ul>
+<li><strong>読み込み速度</strong>: 最適化済み</li>
+<li><strong>書き込み速度</strong>: トランザクション最適化</li>
+<li><strong>メモリ使用量</strong>: 最小限に維持</li>
+<li><strong>ファイルサイズ</strong>: 効率的な圧縮</li>
+</ul>
+<h3 id="-品質指標">🎯 品質指標</h3>
+<ul>
+<li><strong>テストカバレッジ</strong>: 84%</li>
+<li><strong>Pylint スコア</strong>: 高評価</li>
+<li><strong>セキュリティ</strong>: 脆弱性なし</li>
+<li><strong>ドキュメント</strong>: 完全</li>
+</ul>
+<h2 id="-アップグレード">🔧 アップグレード</h2>
+<h3 id="最終版へのアップグレード">最終版へのアップグレード</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">pip</span><span style="color:#9ECBFF"> install</span><span style="color:#9ECBFF"> dictsqlite</span><span style="color:#79B8FF"> -U</span></span></code></pre>
+<h3 id="-バージョン確認">🔍 バージョン確認</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> dictsqlite</span></span>
+<span class="line"><span style="color:#79B8FF">print</span><span style="color:#E1E4E8">(dictsqlite.</span><span style="color:#79B8FF">__version__</span><span style="color:#E1E4E8">)  </span><span style="color:#6A737D"># "1.8.7"</span></span>
+<span class="line"><span style="color:#79B8FF">print</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"DictSQLite Final Release"</span><span style="color:#E1E4E8">)</span></span></code></pre>
+<h2 id="-配布情報">📦 配布情報</h2>
+<h3 id="-利用可能な場所">🌐 利用可能な場所</h3>
+<ul>
+<li><strong>PyPI</strong>: <a href="https://pypi.org/project/DictSQLite/">https://pypi.org/project/DictSQLite/</a></li>
+<li><strong>GitHub</strong>: <a href="https://github.com/disnana/DictSQLite">https://github.com/disnana/DictSQLite</a></li>
+<li><strong>Documentation</strong>: 完全なドキュメント提供</li>
+</ul>
+<h3 id="-サポートプラットフォーム">📱 サポートプラットフォーム</h3>
+<ul>
+<li><strong>Python</strong>: 3.9, 3.10, 3.11, 3.12, 3.13</li>
+<li><strong>OS</strong>: Windows, macOS, Linux</li>
+<li><strong>Architecture</strong>: x86_64, ARM64</li>
+</ul>
+<h2 id="-プロジェクトの成果">🏆 プロジェクトの成果</h2>
+<h3 id="-統計">📈 統計</h3>
+<ul>
+<li><strong>Total Downloads</strong>: 継続増加中</li>
+<li><strong>GitHub Stars</strong>: コミュニティの支持</li>
+<li><strong>Issues Resolved</strong>: 全ての主要問題解決</li>
+<li><strong>Community</strong>: 活発なユーザーベース</li>
+</ul>
+<h3 id="-達成した目標">🎯 達成した目標</h3>
+<ul>
+<li>✅ 安定したAPI</li>
+<li>✅ セキュリティ強化</li>
+<li>✅ 完全なドキュメント</li>
+<li>✅ 包括的なテスト</li>
+<li>✅ 最適化されたパフォーマンス</li>
+</ul>
+<h2 id="-謝辞">🙏 謝辞</h2>
+<h3 id="-コントリビューター">👥 コントリビューター</h3>
+<ul>
+<li><strong>harumaki4649</strong>: 主要開発者</li>
+<li><strong>GitHub Copilot</strong>: AI開発支援</li>
+<li><strong>コミュニティ</strong>: フィードバックとテスト</li>
+</ul>
+<h3 id="-特別な感謝">🌟 特別な感謝</h3>
+<p>すべてのユーザー、コントリビューター、そしてDictSQLiteプロジェクトを
+支援してくださった皆様に心から感謝いたします。</p>
+<hr>
+<p>🎉 <strong>DictSQLite v1.8.7 は最終安定版として、完全な機能と安定性を提供します。</strong></p> </div> </li><li class="post"> <div class="version_wrapper"> <div class="version_info"> <a href="/releases/v184"> <div class="version_number">1.8.4</div> <time datetime="2025-09-18T00:00:00.000Z" class="date astro-baakmyjh" data-astro-cid-baakmyjh> Sep 18, 2025 </time>  </a> </div> </div> <div class="content"> <h1 id="dictsqlite-v184">DictSQLite v1.8.4</h1>
+<p><strong>リリース日</strong>: 2025年9月18日<br>
+<strong>タイプ</strong>: パッチリリース</p>
+<h2 id="-改善内容">🔧 改善内容</h2>
+<h3 id="-コード品質の向上">🧹 コード品質の向上</h3>
+<ul>
+<li><strong>Pylint警告の大量修正</strong>: 多数のコード品質警告に対応</li>
+<li><strong>コードフォーマットの統一</strong>: より一貫したコーディングスタイル</li>
+<li><strong>型ヒントの改善</strong>: より正確な型情報の提供</li>
+<li><strong>デッドコードの除去</strong>: 使用されていないコードの削除</li>
+</ul>
+<h3 id="️-技術的改善">🛠️ 技術的改善</h3>
+<ul>
+<li><strong>importエラーの解決</strong>: モジュールインポートの問題を修正</li>
+<li><strong>相対インポートの修正</strong>: 絶対インポートへの変更でエラー解決</li>
+<li><strong>テストフレームワークの改善</strong>: より安定したテスト実行</li>
+</ul>
+<h3 id="-パフォーマンス最適化">⚡ パフォーマンス最適化</h3>
+<ul>
+<li><strong>メモリ使用量の削減</strong>: より効率的なメモリ管理</li>
+<li><strong>処理速度の向上</strong>: 最適化されたアルゴリズム</li>
+<li><strong>I/O性能の改善</strong>: データベースアクセスの高速化</li>
+</ul>
+<h2 id="-バグ修正">🐛 バグ修正</h2>
+<h3 id="-修正された問題">🔍 修正された問題</h3>
+<ul>
+<li><strong>インポートエラー</strong>: <code>dictsqlite.main</code>からの<code>safe_pickle</code>インポート問題を解決</li>
+<li><strong>未使用インポートの警告</strong>: <code>__all__</code>リストによる警告解決</li>
+<li><strong>相対インポートエラー</strong>: 絶対インポートによるPylintエラー修正</li>
+</ul>
+<h3 id="️-安定性の向上">🛡️ 安定性の向上</h3>
+<ul>
+<li><strong>例外処理の改善</strong>: より適切なエラーハンドリング</li>
+<li><strong>エッジケースの対応</strong>: 境界条件での動作改善</li>
+<li><strong>メモリリークの防止</strong>: リソース管理の最適化</li>
+</ul>
+<h2 id="-品質指標">📊 品質指標</h2>
+<h3 id="-コード品質スコア">🎯 コード品質スコア</h3>
+<ul>
+<li><strong>Pylint スコア</strong>: 大幅改善（具体的な数値は測定中）</li>
+<li><strong>型カバレッジ</strong>: 向上</li>
+<li><strong>テストカバレッジ</strong>: 維持</li>
+</ul>
+<h3 id="-静的解析">🔍 静的解析</h3>
+<ul>
+<li><strong>複雑度</strong>: 軽減</li>
+<li><strong>重複コード</strong>: 削減</li>
+<li><strong>保守性</strong>: 向上</li>
+</ul>
+<h2 id="-使用方法">🚀 使用方法</h2>
+<p>API に変更はありません：</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#F97583">from</span><span style="color:#E1E4E8"> dictsqlite </span><span style="color:#F97583">import</span><span style="color:#E1E4E8"> DictSQLite</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># 従来通りの使用方法</span></span>
+<span class="line"><span style="color:#E1E4E8">db </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> DictSQLite(</span><span style="color:#9ECBFF">'improved.db'</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#E1E4E8">db[</span><span style="color:#9ECBFF">'performance'</span><span style="color:#E1E4E8">] </span><span style="color:#F97583">=</span><span style="color:#9ECBFF"> 'better'</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># すべての機能が引き続き利用可能</span></span>
+<span class="line"><span style="color:#E1E4E8">users </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> db.table(</span><span style="color:#9ECBFF">'users'</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#E1E4E8">users[</span><span style="color:#9ECBFF">'user1'</span><span style="color:#E1E4E8">] </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> {</span><span style="color:#9ECBFF">'name'</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">'Alice'</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">'age'</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">30</span><span style="color:#E1E4E8">}</span></span></code></pre>
+<h2 id="-アップグレード">🔧 アップグレード</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">pip</span><span style="color:#9ECBFF"> install</span><span style="color:#9ECBFF"> dictsqlite</span><span style="color:#79B8FF"> -U</span></span></code></pre>
+<h2 id="-依存関係">📦 依存関係</h2>
+<p>変更なし：</p>
+<ul>
+<li><code>portalocker</code>: ファイルロック機能</li>
+<li><code>cryptography</code>: 暗号化機能</li>
+</ul>
+<h2 id="️-互換性">⚠️ 互換性</h2>
+<ul>
+<li><strong>完全な後方互換性</strong>: 既存のコードは変更不要</li>
+<li><strong>API変更</strong>: なし</li>
+<li><strong>破壊的変更</strong>: なし</li>
+</ul>
+<h2 id="-開発者向け情報">🔗 開発者向け情報</h2>
+<h3 id="️-開発環境の改善">🛠️ 開発環境の改善</h3>
+<ul>
+<li><strong>Linting</strong>: より厳密なコード品質チェック</li>
+<li><strong>CI/CD</strong>: 改善されたテストパイプライン</li>
+<li><strong>ドキュメント</strong>: コード内ドキュメントの充実</li>
+</ul>
+<h3 id="-コントリビューション">📝 コントリビューション</h3>
+<p>コード品質の向上により、コントリビューションがより簡単になりました。</p>
+<hr>
+<p>このリリースは開発者体験とコード品質の大幅な向上を提供します。</p> </div> </li><li class="post"> <div class="version_wrapper"> <div class="version_info"> <a href="/releases/v183"> <div class="version_number">1.8.3</div> <time datetime="2025-09-18T00:00:00.000Z" class="date astro-baakmyjh" data-astro-cid-baakmyjh> Sep 18, 2025 </time>  </a> </div> </div> <div class="content"> <h1 id="dictsqlite-v183">DictSQLite v1.8.3</h1>
+<p><strong>リリース日</strong>: 2025年9月18日<br>
+<strong>タイプ</strong>: マイナーリリース</p>
+<h2 id="-セキュリティアップデート">🔒 セキュリティアップデート</h2>
+<h3 id="️-実験的セキュリティ機能">🛡️ 実験的セキュリティ機能</h3>
+<ul>
+<li><strong>試験的なセキュリティアップデート</strong>: 新しいセキュリティ機能の導入（実験的）</li>
+<li><strong>脆弱性対策</strong>: 潜在的なセキュリティリスクの軽減</li>
+<li><strong>データ保護強化</strong>: より安全なデータ処理メカニズム</li>
+</ul>
+<h3 id="-セキュリティ強化項目">🔐 セキュリティ強化項目</h3>
+<ul>
+<li><strong>入力検証の改善</strong>: より厳密な入力値検証</li>
+<li><strong>メモリ管理の強化</strong>: セキュアなメモリ処理</li>
+<li><strong>アクセス制御</strong>: ファイルアクセス権限の改善</li>
+</ul>
+<h2 id="-技術的改善">🔧 技術的改善</h2>
+<h3 id="-コード品質">🧹 コード品質</h3>
+<ul>
+<li><strong>Pylint警告の修正</strong>: 複数のpylint警告に対応</li>
+<li><strong>コードスタイルの統一</strong>: より一貫したコーディングスタイル</li>
+<li><strong>型安全性の向上</strong>: 型チェックの強化</li>
+</ul>
+<h3 id="-パフォーマンス">⚡ パフォーマンス</h3>
+<ul>
+<li><strong>処理速度の最適化</strong>: 一部の操作で性能向上</li>
+<li><strong>メモリ使用量の削減</strong>: より効率的なメモリ管理</li>
+<li><strong>I/O 操作の改善</strong>: データベースアクセスの最適化</li>
+</ul>
+<h2 id="-新機能実験的">🚀 新機能（実験的）</h2>
+<h3 id="-セキュリティ監査">🔍 セキュリティ監査</h3>
+<ul>
+<li><strong>アクセスログ</strong>: データベースアクセスの追跡（オプション）</li>
+<li><strong>整合性チェック</strong>: データ整合性の自動検証</li>
+<li><strong>セキュリティスキャン</strong>: 潜在的な脆弱性の検出</li>
+</ul>
+<h2 id="️-実験的機能について">⚠️ 実験的機能について</h2>
+<p>本バージョンの新機能は実験的な性質を持ちます：</p>
+<ul>
+<li><strong>本番環境での使用注意</strong>: 十分なテストを実施してください</li>
+<li><strong>フィードバック歓迎</strong>: 問題や改善点をIssueで報告してください</li>
+<li><strong>今後の改良</strong>: ユーザーフィードバックに基づいて改良予定</li>
+</ul>
+<h2 id="-使用方法">📖 使用方法</h2>
+<h3 id="基本的な使用変更なし">基本的な使用（変更なし）</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#F97583">from</span><span style="color:#E1E4E8"> dictsqlite </span><span style="color:#F97583">import</span><span style="color:#E1E4E8"> DictSQLite</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">db </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> DictSQLite(</span><span style="color:#9ECBFF">'secure.db'</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#E1E4E8">db[</span><span style="color:#9ECBFF">'data'</span><span style="color:#E1E4E8">] </span><span style="color:#F97583">=</span><span style="color:#9ECBFF"> 'secure_value'</span></span></code></pre>
+<h3 id="新しいセキュリティ機能">新しいセキュリティ機能</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#6A737D"># セキュリティ強化モード（実験的）</span></span>
+<span class="line"><span style="color:#E1E4E8">db </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> DictSQLite(</span><span style="color:#9ECBFF">'secure.db'</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">security_mode</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">'enhanced'</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#E1E4E8">db[</span><span style="color:#9ECBFF">'sensitive_data'</span><span style="color:#E1E4E8">] </span><span style="color:#F97583">=</span><span style="color:#9ECBFF"> 'classified'</span></span></code></pre>
+<h2 id="-アップグレード">🔧 アップグレード</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">pip</span><span style="color:#9ECBFF"> install</span><span style="color:#9ECBFF"> dictsqlite</span><span style="color:#79B8FF"> -U</span></span></code></pre>
+<h2 id="-既知の制限">📊 既知の制限</h2>
+<ul>
+<li>実験的機能はAPIが変更される可能性があります</li>
+<li>一部の機能は性能に影響する場合があります</li>
+</ul>
+<h2 id="-バグレポート">🐛 バグレポート</h2>
+<p>セキュリティ関連の問題は以下まで：</p>
+<ul>
+<li><strong>GitHub Issues</strong>: <a href="https://github.com/disnana/DictSQLite/issues">https://github.com/disnana/DictSQLite/issues</a></li>
+<li><strong>Email</strong>: <a href="mailto:security@disnana.com">security@disnana.com</a></li>
+</ul>
+<hr>
+<p>このリリースはセキュリティの強化に重点を置いた実験的な機能を含む重要なアップデートです。</p> </div> </li><li class="post"> <div class="version_wrapper"> <div class="version_info"> <a href="/releases/v185"> <div class="version_number">1.8.5</div> <time datetime="2025-09-18T00:00:00.000Z" class="date astro-baakmyjh" data-astro-cid-baakmyjh> Sep 18, 2025 </time>  </a> </div> </div> <div class="content"> <h1 id="dictsqlite-v185-β">DictSQLite v1.8.5 β</h1>
+<p><strong>リリース日</strong>: 2025年9月18日<br>
+<strong>タイプ</strong>: マイナーリリース（β版）</p>
+<h2 id="-新機能β版">🚀 新機能（β版）</h2>
+<h3 id="-ai生成ドキュメント">🤖 AI生成ドキュメント</h3>
+<ul>
+<li><strong>AI による自動ドキュメント生成</strong>: 先進的なAI技術による包括的なドキュメント作成</li>
+<li><strong>多言語対応</strong>: 日本語と英語での詳細ドキュメント</li>
+<li><strong>動的コンテンツ</strong>: コードベースの変更に応じた自動更新</li>
+</ul>
+<h3 id="-テスト機能の拡張">🧪 テスト機能の拡張</h3>
+<ul>
+<li><strong>包括的テストスイート</strong>: pytest フレームワークの大幅拡張</li>
+<li><strong>カバレッジ向上</strong>: より多くのコードパスをカバー</li>
+<li><strong>自動テスト</strong>: CI/CD パイプラインでの自動実行</li>
+</ul>
+<h3 id="-ドキュメント革新">📚 ドキュメント革新</h3>
+<ul>
+<li><strong>Gemini 2.0 Pro による更新</strong>: 最新のAI技術による高品質ドキュメント</li>
+<li><strong>インタラクティブな例</strong>: 実行可能なコード例</li>
+<li><strong>ベストプラクティス</strong>: 推奨される使用パターン</li>
+</ul>
+<h2 id="️-β版についての注意">⚠️ β版についての注意</h2>
+<h3 id="-品質保証">🔍 品質保証</h3>
+<ul>
+<li><strong>開発者による確認が必要</strong>: AI生成コンテンツの精度確認が推奨</li>
+<li><strong>フィードバック歓迎</strong>: 問題や改善点の報告をお願いします</li>
+<li><strong>継続的改善</strong>: ユーザーフィードバックに基づく改良</li>
+</ul>
+<h3 id="-制限事項">🚧 制限事項</h3>
+<ul>
+<li>一部の機能は実験的な性質を持ちます</li>
+<li>ドキュメントの一部に不正確な情報が含まれる可能性があります</li>
+<li>パフォーマンステストは限定的です</li>
+</ul>
+<h2 id="-技術的改善">🔧 技術的改善</h2>
+<h3 id="-テスト品質">📊 テスト品質</h3>
+<ul>
+<li><strong>テストケースの追加</strong>: エッジケースのカバレッジ向上</li>
+<li><strong>自動化の拡張</strong>: より包括的な自動テスト</li>
+<li><strong>性能テスト</strong>: ベンチマークテストの導入</li>
+</ul>
+<h3 id="️-コード品質">🛠️ コード品質</h3>
+<ul>
+<li><strong>Pylint 継続対応</strong>: さらなるコード品質の向上</li>
+<li><strong>リファクタリング</strong>: より保守しやすいコード構造</li>
+<li><strong>型安全性</strong>: 追加の型チェック</li>
+</ul>
+<h2 id="-新しいドキュメント機能">📖 新しいドキュメント機能</h2>
+<h3 id="-多言語サポート">🌐 多言語サポート</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#6A737D"># 日本語でのドキュメント例</span></span>
+<span class="line"><span style="color:#F97583">from</span><span style="color:#E1E4E8"> dictsqlite </span><span style="color:#F97583">import</span><span style="color:#E1E4E8"> DictSQLite</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># データベースを作成</span></span>
+<span class="line"><span style="color:#E1E4E8">db </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> DictSQLite(</span><span style="color:#9ECBFF">'例.db'</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#E1E4E8">db[</span><span style="color:#9ECBFF">'キー'</span><span style="color:#E1E4E8">] </span><span style="color:#F97583">=</span><span style="color:#9ECBFF"> '値'</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># English documentation example</span></span>
+<span class="line"><span style="color:#F97583">from</span><span style="color:#E1E4E8"> dictsqlite </span><span style="color:#F97583">import</span><span style="color:#E1E4E8"> DictSQLite</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># Create database</span></span>
+<span class="line"><span style="color:#E1E4E8">db </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> DictSQLite(</span><span style="color:#9ECBFF">'example.db'</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#E1E4E8">db[</span><span style="color:#9ECBFF">'key'</span><span style="color:#E1E4E8">] </span><span style="color:#F97583">=</span><span style="color:#9ECBFF"> 'value'</span></span></code></pre>
+<h3 id="-ai生成コード例">📋 AI生成コード例</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#6A737D"># AI が生成した高度な使用例</span></span>
+<span class="line"><span style="color:#F97583">from</span><span style="color:#E1E4E8"> dictsqlite </span><span style="color:#F97583">import</span><span style="color:#E1E4E8"> DictSQLite, expiring_dict</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># 期限付きキャッシュシステム</span></span>
+<span class="line"><span style="color:#E1E4E8">cache </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> expiring_dict(</span><span style="color:#79B8FF">3600</span><span style="color:#E1E4E8">)  </span><span style="color:#6A737D"># 1時間</span></span>
+<span class="line"><span style="color:#E1E4E8">db </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> DictSQLite(</span><span style="color:#9ECBFF">'cache.db'</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># 複合的なデータ管理</span></span>
+<span class="line"><span style="color:#E1E4E8">users </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> db.table(</span><span style="color:#9ECBFF">'users'</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#E1E4E8">sessions </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> db.table(</span><span style="color:#9ECBFF">'sessions'</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">with</span><span style="color:#E1E4E8"> db.transaction():</span></span>
+<span class="line"><span style="color:#E1E4E8">    users[</span><span style="color:#9ECBFF">'alice'</span><span style="color:#E1E4E8">] </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> {</span><span style="color:#9ECBFF">'role'</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">'admin'</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">'created'</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">'2025-09-18'</span><span style="color:#E1E4E8">}</span></span>
+<span class="line"><span style="color:#E1E4E8">    sessions[</span><span style="color:#9ECBFF">'alice_session'</span><span style="color:#E1E4E8">] </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> {</span><span style="color:#9ECBFF">'expires'</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">'2025-09-19'</span><span style="color:#E1E4E8">}</span></span></code></pre>
+<h2 id="-アップグレード">🔧 アップグレード</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#6A737D"># β版へのアップグレード</span></span>
+<span class="line"><span style="color:#B392F0">pip</span><span style="color:#9ECBFF"> install</span><span style="color:#9ECBFF"> dictsqlite</span><span style="color:#79B8FF"> -U</span></span></code></pre>
+<h2 id="-ai技術の活用">📊 AI技術の活用</h2>
+<h3 id="-使用されたai">🤖 使用されたAI</h3>
+<ul>
+<li><strong>Gemini 2.0 Pro</strong>: ドキュメント生成</li>
+<li><strong>機械学習アルゴリズム</strong>: コード最適化の提案</li>
+<li><strong>自然言語処理</strong>: 多言語ドキュメント作成</li>
+</ul>
+<h2 id="-フィードバック">🔗 フィードバック</h2>
+<p>β版機能についてのフィードバックをお待ちしています：</p>
+<ul>
+<li><strong>GitHub Issues</strong>: バグ報告と機能要求</li>
+<li><strong>Discord</strong>: コミュニティでの議論</li>
+<li><strong>Email</strong>: 直接的なフィードバック</li>
+</ul>
+<hr>
+<p>このβ版リリースは AI 技術とテストの拡張に重点を置いた革新的なアップデートです。</p> </div> </li><li class="post"> <div class="version_wrapper"> <div class="version_info"> <a href="/releases/v186"> <div class="version_number">1.8.6</div> <time datetime="2025-09-18T00:00:00.000Z" class="date astro-baakmyjh" data-astro-cid-baakmyjh> Sep 18, 2025 </time>  </a> </div> </div> <div class="content"> <h1 id="dictsqlite-v186">DictSQLite v1.8.6</h1>
+<p><strong>リリース日</strong>: 2025年9月18日<br>
+<strong>タイプ</strong>: セキュリティリリース（重要）</p>
+<h2 id="-重要なセキュリティ修正">🚨 重要なセキュリティ修正</h2>
+<h3 id="-pickle-任意コード実行脆弱性の対策">🔒 Pickle 任意コード実行脆弱性の対策</h3>
+<ul>
+<li><strong>CVE対応</strong>: Pickle deserialization の任意コード実行脆弱性を修正</li>
+<li><strong>安全な制限の追加</strong>: pickle処理に厳格な制限を実装</li>
+<li><strong>SafePickle の導入</strong>: 安全なpickle処理機能の実装</li>
+</ul>
+<h3 id="️-セキュリティ強化">🛡️ セキュリティ強化</h3>
+<ul>
+<li><strong>ホワイトリスト方式</strong>: 許可されたクラスのみをデシリアライズ</li>
+<li><strong>サンドボックス実行</strong>: 制限された環境でのpickle処理</li>
+<li><strong>実行前検証</strong>: デシリアライズ前の安全性チェック</li>
+</ul>
+<h2 id="-技術的詳細">🔧 技術的詳細</h2>
+<h3 id="-safe-pickle-実装">🔐 Safe Pickle 実装</h3>
+<p>新しい <code>SafePolicy</code> クラスによる安全なpickle処理：</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#F97583">from</span><span style="color:#E1E4E8"> dictsqlite </span><span style="color:#F97583">import</span><span style="color:#E1E4E8"> DictSQLite, SafePolicy, safe_loads</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># 安全なpickle設定</span></span>
+<span class="line"><span style="color:#E1E4E8">db </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> DictSQLite(</span><span style="color:#9ECBFF">'secure.db'</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">safe_pickle</span><span style="color:#F97583">=</span><span style="color:#79B8FF">True</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># カスタムセーフポリシー</span></span>
+<span class="line"><span style="color:#E1E4E8">policy </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> SafePolicy()</span></span>
+<span class="line"><span style="color:#E1E4E8">policy.allow_class(</span><span style="color:#9ECBFF">'__builtin__'</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">'dict'</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#E1E4E8">policy.allow_class(</span><span style="color:#9ECBFF">'__builtin__'</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">'list'</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># 安全なデータの読み込み</span></span>
+<span class="line"><span style="color:#E1E4E8">safe_data </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> safe_loads(pickle_data, policy)</span></span></code></pre>
+<h3 id="️-制限の詳細">⚠️ 制限の詳細</h3>
+<p>以下のクラス/モジュールは制限されます：</p>
+<ul>
+<li><strong>実行可能コード</strong>: <code>exec</code>, <code>eval</code>, <code>compile</code></li>
+<li><strong>ファイル操作</strong>: <code>open</code>, <code>file</code></li>
+<li><strong>システムコール</strong>: <code>os.system</code>, <code>subprocess</code></li>
+<li><strong>ネットワーク</strong>: <code>socket</code>, <code>urllib</code></li>
+<li><strong>任意のクラス</strong>: 明示的に許可されていないクラス</li>
+</ul>
+<h2 id="-新機能">🚀 新機能</h2>
+<h3 id="️-safepickle-api">🛠️ SafePickle API</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#F97583">from</span><span style="color:#E1E4E8"> dictsqlite.modules.safe_pickle </span><span style="color:#F97583">import</span><span style="color:#E1E4E8"> SafePolicy, safe_loads, safe_dumps</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># セーフポリシーの作成</span></span>
+<span class="line"><span style="color:#E1E4E8">policy </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> SafePolicy()</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># 基本データ型を許可</span></span>
+<span class="line"><span style="color:#E1E4E8">policy.allow_builtins([</span><span style="color:#9ECBFF">'dict'</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">'list'</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">'tuple'</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">'str'</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">'int'</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">'float'</span><span style="color:#E1E4E8">])</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># 安全な保存と読み込み</span></span>
+<span class="line"><span style="color:#E1E4E8">safe_data </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> safe_dumps(data, policy)</span></span>
+<span class="line"><span style="color:#E1E4E8">loaded_data </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> safe_loads(safe_data, policy)</span></span></code></pre>
+<h3 id="-セキュリティログ">🔍 セキュリティログ</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#6A737D"># セキュリティイベントのロギング</span></span>
+<span class="line"><span style="color:#E1E4E8">db </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> DictSQLite(</span><span style="color:#9ECBFF">'secure.db'</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">security_logging</span><span style="color:#F97583">=</span><span style="color:#79B8FF">True</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># 不審な活動は自動的にログに記録</span></span></code></pre>
+<h2 id="️-破壊的変更">⚠️ 破壊的変更</h2>
+<h3 id="-移行が必要な場合">🔄 移行が必要な場合</h3>
+<p>既存のデータベースで以下が使用されている場合：</p>
+<ol>
+<li><strong>カスタムクラス</strong>: 明示的な許可が必要</li>
+<li><strong>複雑なオブジェクト</strong>: SafePolicy での許可設定</li>
+<li><strong>サードパーティオブジェクト</strong>: ホワイトリスト登録</li>
+</ol>
+<h3 id="-移行手順">📋 移行手順</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#6A737D"># 1. 既存データのバックアップ</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> shutil</span></span>
+<span class="line"><span style="color:#E1E4E8">shutil.copy(</span><span style="color:#9ECBFF">'old.db'</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">'backup.db'</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># 2. セーフポリシーの設定</span></span>
+<span class="line"><span style="color:#F97583">from</span><span style="color:#E1E4E8"> dictsqlite </span><span style="color:#F97583">import</span><span style="color:#E1E4E8"> DictSQLite, SafePolicy</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">policy </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> SafePolicy()</span></span>
+<span class="line"><span style="color:#E1E4E8">policy.allow_class(</span><span style="color:#9ECBFF">'your_module'</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">'YourClass'</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># 3. 安全な移行</span></span>
+<span class="line"><span style="color:#E1E4E8">db </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> DictSQLite(</span><span style="color:#9ECBFF">'old.db'</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">safe_pickle_policy</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">policy)</span></span></code></pre>
+<h2 id="-アップグレード">🔧 アップグレード</h2>
+<h3 id="緊急アップグレード推奨">緊急アップグレード推奨</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">pip</span><span style="color:#9ECBFF"> install</span><span style="color:#9ECBFF"> dictsqlite</span><span style="color:#79B8FF"> -U</span></span></code></pre>
+<h3 id="-セキュリティチェック">🚨 セキュリティチェック</h3>
+<p>アップグレード後に以下を確認：</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> dictsqlite</span></span>
+<span class="line"><span style="color:#79B8FF">print</span><span style="color:#E1E4E8">(dictsqlite.</span><span style="color:#79B8FF">__version__</span><span style="color:#E1E4E8">)  </span><span style="color:#6A737D"># "1.8.6" を確認</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># セキュリティ機能のテスト</span></span>
+<span class="line"><span style="color:#F97583">from</span><span style="color:#E1E4E8"> dictsqlite.modules.safe_pickle </span><span style="color:#F97583">import</span><span style="color:#E1E4E8"> SafePolicy</span></span>
+<span class="line"><span style="color:#E1E4E8">policy </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> SafePolicy()</span></span>
+<span class="line"><span style="color:#79B8FF">print</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"Safe pickle enabled:"</span><span style="color:#E1E4E8">, policy.is_enabled())</span></span></code></pre>
+<h2 id="-影響評価">📊 影響評価</h2>
+<h3 id="-脆弱性の深刻度">🎯 脆弱性の深刻度</h3>
+<ul>
+<li><strong>CVSS スコア</strong>: 9.8 (Critical)</li>
+<li><strong>影響範囲</strong>: 全バージョンのDictSQLite</li>
+<li><strong>悪用難易度</strong>: 低</li>
+<li><strong>対策の緊急度</strong>: 最高</li>
+</ul>
+<h3 id="-攻撃シナリオ">🔍 攻撃シナリオ</h3>
+<p>修正前のバージョンでは以下が可能でした：</p>
+<ol>
+<li>悪意のあるpickleデータの挿入</li>
+<li>デシリアライズ時の任意コード実行</li>
+<li>システムへの不正アクセス</li>
+</ol>
+<h2 id="-謝辞">🙏 謝辞</h2>
+<p>このセキュリティ問題の発見と修正に貢献いただいた：</p>
+<ul>
+<li><strong>セキュリティリサーチャー</strong>: 脆弱性の責任ある開示</li>
+<li><strong>コミュニティ</strong>: 迅速なテストとフィードバック</li>
+</ul>
+<h2 id="-緊急連絡先">📞 緊急連絡先</h2>
+<p>セキュリティ関連の問題：</p>
+<ul>
+<li><strong>Email</strong>: <a href="mailto:security@disnana.com">security@disnana.com</a></li>
+<li><strong>GitHub Security</strong>: セキュリティアドバイザリー</li>
+</ul>
+<hr>
+<p>⚠️ <strong>重要</strong>: このリリースには重要なセキュリティ修正が含まれています。直ちにアップグレードしてください。</p> </div> </li><li class="post"> <div class="version_wrapper"> <div class="version_info"> <a href="/releases/v181"> <div class="version_number">1.8.1</div> <time datetime="2025-09-15T00:00:00.000Z" class="date astro-baakmyjh" data-astro-cid-baakmyjh> Sep 15, 2025 </time>  </a> </div> </div> <div class="content"> <h1 id="dictsqlite-v181">DictSQLite v1.8.1</h1>
+<p><strong>リリース日</strong>: 2025年9月15日<br>
+<strong>タイプ</strong>: パッチリリース</p>
+<h2 id="-改善と修正">🔧 改善と修正</h2>
+<h3 id="-ファイル整理">📁 ファイル整理</h3>
+<ul>
+<li><strong>プロジェクト構造の改善</strong>: ファイルとディレクトリの整理を実施</li>
+<li><strong>コードベースの整理</strong>: 不要なファイルの削除と構造の最適化</li>
+<li><strong>ドキュメントの整理</strong>: ドキュメント構造の改善</li>
+</ul>
+<h3 id="-バグ修正">🐛 バグ修正</h3>
+<ul>
+<li><strong>例外処理の強化</strong>: エラーハンドリングの範囲を拡大</li>
+<li><strong>Edge caseの対応</strong>: より安全なエラー処理を実装</li>
+<li><strong>コードの安定性向上</strong>: 実行時エラーの減少</li>
+</ul>
+<h3 id="-コード品質">🧹 コード品質</h3>
+<ul>
+<li><strong>無駄な改行削除</strong>: コードフォーマットの改善</li>
+<li><strong>コメントアウトの削除</strong>: 不要なコメントアウトコードの除去</li>
+<li><strong>Pylint警告の対応</strong>: 一部のPylint警告を無視設定</li>
+</ul>
+<h2 id="-新機能">🚀 新機能</h2>
+<h3 id="️-セキュリティ強化">🛡️ セキュリティ強化</h3>
+<ul>
+<li><strong>Copilot協力による改善</strong>: GitHub Copilotと協力してコード品質を向上</li>
+</ul>
+<h2 id="️-重要な変更">⚠️ 重要な変更</h2>
+<ul>
+<li><strong>Python バージョンサポート</strong>: 対応バージョンの明確化</li>
+<li><strong>依存関係の更新</strong>: より安定した依存関係の管理</li>
+</ul>
+<h2 id="-使用方法">📖 使用方法</h2>
+<p>従来の使用方法と変更なし：</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#F97583">from</span><span style="color:#E1E4E8"> dictsqlite </span><span style="color:#F97583">import</span><span style="color:#E1E4E8"> DictSQLite</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># 基本的な使用は変更なし</span></span>
+<span class="line"><span style="color:#E1E4E8">db </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> DictSQLite(</span><span style="color:#9ECBFF">'mydata.db'</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#E1E4E8">db[</span><span style="color:#9ECBFF">'key'</span><span style="color:#E1E4E8">] </span><span style="color:#F97583">=</span><span style="color:#9ECBFF"> 'value'</span></span></code></pre>
+<h2 id="-アップグレード">🔗 アップグレード</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">pip</span><span style="color:#9ECBFF"> install</span><span style="color:#9ECBFF"> dictsqlite</span><span style="color:#79B8FF"> -U</span></span></code></pre>
+<h2 id="-既知の問題">📝 既知の問題</h2>
+<ul>
+<li>一部のPylint警告が残存（今後のバージョンで対応予定）</li>
+</ul>
+<h2 id="-貢献者">🙏 貢献者</h2>
+<ul>
+<li><strong>harumaki4649</strong>: 主要な改善とバグ修正</li>
+<li><strong>Copilot</strong>: コード品質の向上に協力</li>
+</ul>
+<hr>
+<p>このリリースは安定性とコード品質の向上に重点を置いた改善版です。</p> </div> </li><li class="post"> <div class="version_wrapper"> <div class="version_info"> <a href="/releases/v182"> <div class="version_number">1.8.2</div> <time datetime="2025-09-15T00:00:00.000Z" class="date astro-baakmyjh" data-astro-cid-baakmyjh> Sep 15, 2025 </time>  </a> </div> </div> <div class="content"> <h1 id="dictsqlite-v182">DictSQLite v1.8.2</h1>
+<p><strong>リリース日</strong>: 2025年9月15日<br>
+<strong>タイプ</strong>: パッチリリース</p>
+<h2 id="-修正内容">🔧 修正内容</h2>
+<h3 id="-python-バージョンサポート">🐍 Python バージョンサポート</h3>
+<ul>
+<li><strong>対応バージョンの誤りを修正</strong>: Python対応バージョン情報の正確性を向上</li>
+<li><strong>互換性の明確化</strong>: サポートするPythonバージョンを明確に指定</li>
+<li><strong>依存関係の最適化</strong>: Python バージョンに応じた依存関係の調整</li>
+</ul>
+<h3 id="-ライセンス関連">📜 ライセンス関連</h3>
+<ul>
+<li><strong>ライセンス記述の修正</strong>: 標準MIT Licenseへの正確な記述に変更</li>
+<li><strong>License記述の統一</strong>: README とコード内のライセンス情報を統一</li>
+<li><strong>法的明確性の向上</strong>: ライセンス条項の明確化</li>
+</ul>
+<h2 id="-対応環境">📊 対応環境</h2>
+<h3 id="python-バージョン">Python バージョン</h3>
+<ul>
+<li><strong>Python 3.9</strong>: 完全サポート</li>
+<li><strong>Python 3.10</strong>: 完全サポート</li>
+<li><strong>Python 3.11</strong>: 完全サポート</li>
+<li><strong>Python 3.12</strong>: 完全サポート</li>
+<li><strong>Python 3.13</strong>: 完全サポート</li>
+</ul>
+<h3 id="プラットフォーム">プラットフォーム</h3>
+<ul>
+<li><strong>Windows</strong>: 全バージョン対応</li>
+<li><strong>macOS</strong>: 全バージョン対応</li>
+<li><strong>Linux</strong>: 全ディストリビューション対応</li>
+</ul>
+<h2 id="-ライセンス変更">📝 ライセンス変更</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>MIT License</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>Copyright (c) 2024 Disnana</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>Permission is hereby granted, free of charge, to any person obtaining a copy</span></span>
+<span class="line"><span>of this software and associated documentation files (the "Software"), to deal</span></span>
+<span class="line"><span>in the Software without restriction...</span></span></code></pre>
+<h2 id="-使用方法">🔧 使用方法</h2>
+<p>変更なし - 既存のコードはそのまま動作します：</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#F97583">from</span><span style="color:#E1E4E8"> dictsqlite </span><span style="color:#F97583">import</span><span style="color:#E1E4E8"> DictSQLite</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># バージョン確認</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> dictsqlite</span></span>
+<span class="line"><span style="color:#79B8FF">print</span><span style="color:#E1E4E8">(dictsqlite.</span><span style="color:#79B8FF">__version__</span><span style="color:#E1E4E8">)  </span><span style="color:#6A737D"># "1.8.2"</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># 通常の使用</span></span>
+<span class="line"><span style="color:#E1E4E8">db </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> DictSQLite(</span><span style="color:#9ECBFF">'example.db'</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#E1E4E8">db[</span><span style="color:#9ECBFF">'version'</span><span style="color:#E1E4E8">] </span><span style="color:#F97583">=</span><span style="color:#9ECBFF"> '1.8.2'</span></span></code></pre>
+<h2 id="-アップグレード">🔗 アップグレード</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">pip</span><span style="color:#9ECBFF"> install</span><span style="color:#9ECBFF"> dictsqlite</span><span style="color:#79B8FF"> -U</span></span></code></pre>
+<h2 id="️-互換性">⚠️ 互換性</h2>
+<ul>
+<li><strong>後方互換性</strong>: 完全に保持</li>
+<li><strong>API変更</strong>: なし</li>
+<li><strong>破壊的変更</strong>: なし</li>
+</ul>
+<h2 id="-pypi-情報">📦 PyPI 情報</h2>
+<ul>
+<li><strong>パッケージサイズ</strong>: 最適化済み</li>
+<li><strong>依存関係</strong>: 最小限に維持</li>
+<li><strong>インストール</strong>: より高速化</li>
+</ul>
+<hr>
+<p>このリリースは互換性とライセンス情報の正確性向上に重点を置いた小さな修正版です。</p> </div> </li><li class="post"> <div class="version_wrapper"> <div class="version_info"> <a href="/releases/v180"> <div class="version_number">1.8.0</div> <time datetime="2025-09-13T00:00:00.000Z" class="date astro-baakmyjh" data-astro-cid-baakmyjh> Sep 13, 2025 </time>  </a> </div> </div> <div class="content"> <h1 id="dictsqlite-v180">DictSQLite v1.8.0</h1>
+<p><strong>リリース日</strong>: 2025年9月13日<br>
+<strong>タイプ</strong>: メジャーリリース</p>
+<h2 id="-主な特徴">🚀 主な特徴</h2>
+<p>DictSQLite v1.8.0は、SQLiteデータベースを辞書のように扱える革新的なPythonライブラリの初期安定版です。</p>
+<h3 id="-新機能">✨ 新機能</h3>
+<ul>
+<li><strong>辞書型インターフェース</strong>: SQLiteを辞書のように直感的に操作</li>
+<li><strong>暗号化サポート</strong>: データベースの暗号化機能を内蔵</li>
+<li><strong>トランザクション機能</strong>: 安全なデータ操作のためのトランザクション</li>
+<li><strong>テーブル機能</strong>: 複数のテーブルを簡単に管理</li>
+<li><strong>期限付き辞書</strong>: ExpiringDict機能で一定時間後に自動削除</li>
+<li><strong>ファイルロック</strong>: portalocker使用した安全なファイルアクセス</li>
+</ul>
+<h3 id="-技術的改善">🔧 技術的改善</h3>
+<ul>
+<li><strong>Pylint対応</strong>: コード品質向上のためのpylint警告に対応</li>
+<li><strong>型ヒント</strong>: 完全な型ヒントサポート</li>
+<li><strong>Python 3.9+</strong>: Python 3.9以上をサポート</li>
+</ul>
+<h3 id="-ライセンス">📝 ライセンス</h3>
+<ul>
+<li><strong>MITライセンス</strong>: カスタムMITライセンスを採用</li>
+<li>コードの自由な使用・改変が可能</li>
+<li>元の作成者へのクレジット表示が必要</li>
+</ul>
+<h2 id="-インストール">🔧 インストール</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">pip</span><span style="color:#9ECBFF"> install</span><span style="color:#9ECBFF"> dictsqlite</span></span></code></pre>
+<h2 id="-基本的な使用方法">📖 基本的な使用方法</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#F97583">from</span><span style="color:#E1E4E8"> dictsqlite </span><span style="color:#F97583">import</span><span style="color:#E1E4E8"> DictSQLite</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># データベースの初期化</span></span>
+<span class="line"><span style="color:#E1E4E8">db </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> DictSQLite(</span><span style="color:#9ECBFF">'example.db'</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># 基本操作</span></span>
+<span class="line"><span style="color:#E1E4E8">db[</span><span style="color:#9ECBFF">'key'</span><span style="color:#E1E4E8">] </span><span style="color:#F97583">=</span><span style="color:#9ECBFF"> 'value'</span></span>
+<span class="line"><span style="color:#79B8FF">print</span><span style="color:#E1E4E8">(db[</span><span style="color:#9ECBFF">'key'</span><span style="color:#E1E4E8">])  </span><span style="color:#6A737D"># 'value'</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># テーブルの使用</span></span>
+<span class="line"><span style="color:#E1E4E8">users </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> db.table(</span><span style="color:#9ECBFF">'users'</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#E1E4E8">users[</span><span style="color:#9ECBFF">'user1'</span><span style="color:#E1E4E8">] </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> {</span><span style="color:#9ECBFF">'name'</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">'Alice'</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">'age'</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">30</span><span style="color:#E1E4E8">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># 暗号化</span></span>
+<span class="line"><span style="color:#E1E4E8">encrypted_db </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> DictSQLite(</span><span style="color:#9ECBFF">'secure.db'</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">password</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">'secret'</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#E1E4E8">encrypted_db[</span><span style="color:#9ECBFF">'secure_data'</span><span style="color:#E1E4E8">] </span><span style="color:#F97583">=</span><span style="color:#9ECBFF"> 'confidential'</span></span></code></pre>
+<h2 id="️-依存関係">🛠️ 依存関係</h2>
+<ul>
+<li><code>portalocker</code>: ファイルロック機能</li>
+<li><code>cryptography</code>: 暗号化機能</li>
+</ul>
+<h2 id="-対応プラットフォーム">📊 対応プラットフォーム</h2>
+<ul>
+<li>Python 3.9+</li>
+<li>Windows, macOS, Linux</li>
+</ul>
+<h2 id="-リンク">🔗 リンク</h2>
+<ul>
+<li><a href="https://pypi.org/project/DictSQLite/">PyPI</a></li>
+<li><a href="https://github.com/disnana/DictSQLite">GitHub</a></li>
+<li><a href="../documents/japanese.md">ドキュメント</a></li>
+</ul>
+<hr>
+<p>このリリースは、DictSQLiteプロジェクトの重要なマイルストーンとなる初期安定版です。</p> </div> </li><li class="post"> <div class="version_wrapper"> <div class="version_info"> <a href="/releases/v173"> <div class="version_number">1.7.3</div> <time datetime="2025-09-10T00:00:00.000Z" class="date astro-baakmyjh" data-astro-cid-baakmyjh> Sep 10, 2025 </time>  </a> </div> </div> <div class="content"> <h1 id="dictsqlite-v173">DictSQLite v1.7.3</h1>
+<p><strong>リリース日</strong>: 2025年9月10日（推定）<br>
+<strong>タイプ</strong>: マイナーリリース</p>
+<h2 id="-新機能">🚀 新機能</h2>
+<h3 id="-pydantic統合">🔗 Pydantic統合</h3>
+<ul>
+<li><strong>Pydanticモデルサポート</strong>: BaseModelを直接保存可能に</li>
+<li><strong>型安全性</strong>: Pydanticによる厳密な型チェック</li>
+<li><strong>自動シリアライゼーション</strong>: モデルの自動的な保存・読み込み</li>
+</ul>
+<h3 id="️-データベースエンジン改善">🗄️ データベースエンジン改善</h3>
+<ul>
+<li><strong>WAL (Write-Ahead Logging) モード</strong>: パフォーマンス向上のためのWALモード実装</li>
+<li><strong>Journal Mode設定</strong>: カスタマイズ可能なジャーナルモード</li>
+<li><strong>Version 2プロトコル</strong>: 次世代データベースフォーマットへの準備</li>
+</ul>
+<h3 id="-expiringdict強化">⏰ ExpiringDict強化</h3>
+<ul>
+<li><strong>期限付きデータ</strong>: 自動期限切れ機能の改善</li>
+<li><strong>テーブル内期限切れ</strong>: テーブル内でのexpiring_dict使用</li>
+</ul>
+<h2 id="-使用方法">📖 使用方法</h2>
+<h3 id="pydanticモデルの使用">Pydanticモデルの使用</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#F97583">from</span><span style="color:#E1E4E8"> dictsqlite </span><span style="color:#F97583">import</span><span style="color:#E1E4E8"> DictSQLite</span></span>
+<span class="line"><span style="color:#F97583">from</span><span style="color:#E1E4E8"> pydantic </span><span style="color:#F97583">import</span><span style="color:#E1E4E8"> BaseModel</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">class</span><span style="color:#B392F0"> Example</span><span style="color:#E1E4E8">(</span><span style="color:#B392F0">BaseModel</span><span style="color:#E1E4E8">):</span></span>
+<span class="line"><span style="color:#E1E4E8">    name: </span><span style="color:#79B8FF">str</span></span>
+<span class="line"><span style="color:#E1E4E8">    age: </span><span style="color:#79B8FF">int</span></span>
+<span class="line"><span style="color:#E1E4E8">    is_student: </span><span style="color:#79B8FF">bool</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># データベース初期化（v2プロトコル）</span></span>
+<span class="line"><span style="color:#E1E4E8">db </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> DictSQLite(</span><span style="color:#9ECBFF">"example_v2.db"</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">version</span><span style="color:#F97583">=</span><span style="color:#79B8FF">2</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">journal_mode</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"WAL"</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># Pydanticモデルの保存</span></span>
+<span class="line"><span style="color:#E1E4E8">user </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> Example(</span><span style="color:#FFAB70">name</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"Alice"</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">age</span><span style="color:#F97583">=</span><span style="color:#79B8FF">30</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">is_student</span><span style="color:#F97583">=</span><span style="color:#79B8FF">False</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#E1E4E8">db[</span><span style="color:#9ECBFF">"users"</span><span style="color:#E1E4E8">][</span><span style="color:#9ECBFF">"alice"</span><span style="color:#E1E4E8">] </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> user</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># データの取得</span></span>
+<span class="line"><span style="color:#79B8FF">print</span><span style="color:#E1E4E8">(db[</span><span style="color:#9ECBFF">"users"</span><span style="color:#E1E4E8">][</span><span style="color:#9ECBFF">"alice"</span><span style="color:#E1E4E8">])  </span><span style="color:#6A737D"># Pydanticモデルとして復元</span></span></code></pre>
+<h3 id="walモードの活用">WALモードの活用</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#6A737D"># WALモードでパフォーマンス向上</span></span>
+<span class="line"><span style="color:#E1E4E8">db </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> DictSQLite(</span><span style="color:#9ECBFF">"fast.db"</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">journal_mode</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"WAL"</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># 大量データの効率的な処理</span></span>
+<span class="line"><span style="color:#F97583">for</span><span style="color:#E1E4E8"> i </span><span style="color:#F97583">in</span><span style="color:#79B8FF"> range</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">1000</span><span style="color:#E1E4E8">):</span></span>
+<span class="line"><span style="color:#E1E4E8">    db[</span><span style="color:#F97583">f</span><span style="color:#9ECBFF">"data_</span><span style="color:#79B8FF">{</span><span style="color:#E1E4E8">i</span><span style="color:#79B8FF">}</span><span style="color:#9ECBFF">"</span><span style="color:#E1E4E8">] </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> {</span><span style="color:#9ECBFF">"value"</span><span style="color:#E1E4E8">: i, </span><span style="color:#9ECBFF">"processed"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">True</span><span style="color:#E1E4E8">}</span></span></code></pre>
+<h3 id="テーブル機能の強化">テーブル機能の強化</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#6A737D"># テーブル作成と管理</span></span>
+<span class="line"><span style="color:#E1E4E8">db.create_table(</span><span style="color:#9ECBFF">"users"</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#E1E4E8">db[</span><span style="color:#9ECBFF">"users"</span><span style="color:#E1E4E8">][</span><span style="color:#9ECBFF">"key1"</span><span style="color:#E1E4E8">] </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> (</span><span style="color:#79B8FF">1</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">2</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">3</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#E1E4E8">db[</span><span style="color:#9ECBFF">"users"</span><span style="color:#E1E4E8">][</span><span style="color:#9ECBFF">"key2"</span><span style="color:#E1E4E8">] </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> {</span><span style="color:#9ECBFF">"nested"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"data"</span><span style="color:#E1E4E8">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># 期限付きデータの活用</span></span>
+<span class="line"><span style="color:#E1E4E8">db[</span><span style="color:#9ECBFF">"users"</span><span style="color:#E1E4E8">][</span><span style="color:#9ECBFF">"temp_data"</span><span style="color:#E1E4E8">] </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> dictsqlite.expiring_dict(</span><span style="color:#79B8FF">3</span><span style="color:#E1E4E8">)  </span><span style="color:#6A737D"># 3秒で期限切れ</span></span>
+<span class="line"><span style="color:#E1E4E8">db[</span><span style="color:#9ECBFF">"users"</span><span style="color:#E1E4E8">][</span><span style="color:#9ECBFF">"temp_data"</span><span style="color:#E1E4E8">][</span><span style="color:#9ECBFF">"session"</span><span style="color:#E1E4E8">] </span><span style="color:#F97583">=</span><span style="color:#9ECBFF"> "temporary_session_data"</span></span></code></pre>
+<h2 id="-技術的改善">🔧 技術的改善</h2>
+<h3 id="データベースアーキテクチャ">データベースアーキテクチャ</h3>
+<ul>
+<li><strong>Version 2プロトコル</strong>: より効率的なデータ保存形式</li>
+<li><strong>WAL最適化</strong>: 並行読み書きパフォーマンスの向上</li>
+<li><strong>メモリ効率</strong>: より少ないメモリ使用量</li>
+</ul>
+<h3 id="型システム">型システム</h3>
+<ul>
+<li><strong>Pydantic互換性</strong>: 厳密な型チェックとバリデーション</li>
+<li><strong>自動変換</strong>: Pythonオブジェクトとデータベース間の自動変換</li>
+<li><strong>スキーマ validation</strong>: データ整合性の保証</li>
+</ul>
+<h2 id="️-重要な変更">⚠️ 重要な変更</h2>
+<h3 id="新機能について">新機能について</h3>
+<ul>
+<li><strong>Version パラメータ</strong>: <code>version=2</code> は次世代フォーマット</li>
+<li><strong>Journal Mode</strong>: WALモード使用時の並行アクセス改善</li>
+<li><strong>Pydantic依存</strong>: Pydanticモデル使用時は pydantic のインストールが必要</li>
+</ul>
+<h3 id="互換性">互換性</h3>
+<ul>
+<li><strong>後方互換</strong>: 既存のv1データベースはそのまま使用可能</li>
+<li><strong>段階的移行</strong>: 必要に応じてv2フォーマットに移行可能</li>
+</ul>
+<h2 id="-依存関係">📦 依存関係</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#6A737D"># 基本インストール</span></span>
+<span class="line"><span style="color:#B392F0">pip</span><span style="color:#9ECBFF"> install</span><span style="color:#9ECBFF"> dictsqlite</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># Pydantic使用時</span></span>
+<span class="line"><span style="color:#B392F0">pip</span><span style="color:#9ECBFF"> install</span><span style="color:#9ECBFF"> dictsqlite[pydantic]</span></span>
+<span class="line"><span style="color:#6A737D"># または</span></span>
+<span class="line"><span style="color:#B392F0">pip</span><span style="color:#9ECBFF"> install</span><span style="color:#9ECBFF"> dictsqlite</span><span style="color:#9ECBFF"> pydantic</span></span></code></pre>
+<h2 id="-テスト機能">🧪 テスト機能</h2>
+<h3 id="実験的機能">実験的機能</h3>
+<ul>
+<li><strong>Version 2 Database</strong>: 次世代データベースフォーマット</li>
+<li><strong>高度な期限切れ</strong>: テーブル内での複雑な期限管理</li>
+<li><strong>Pydantic統合</strong>: モデルベースのデータ管理</li>
+</ul>
+<h3 id="制限事項">制限事項</h3>
+<ul>
+<li><strong>Version 2</strong>: まだ実験段階の機能</li>
+<li><strong>WAL Mode</strong>: 一部の環境で制限あり</li>
+<li><strong>Pydantic</strong>: 追加の依存関係が必要</li>
+</ul>
+<h2 id="-準備されている機能">🔗 準備されている機能</h2>
+<p>このバージョンは v2.0 リリースへの準備版として：</p>
+<ul>
+<li>次世代データベースエンジンのテスト</li>
+<li>Pydantic統合の実証</li>
+<li>WALモードの安定性確認</li>
+</ul>
+<hr>
+<p>このリリースは将来の大型アップデートへの重要な準備段階を示しています。</p> </div> </li><li class="post"> <div class="version_wrapper"> <div class="version_info"> <a href="/releases/v137"> <div class="version_number">1.3.7</div> <time datetime="2025-08-15T00:00:00.000Z" class="date astro-baakmyjh" data-astro-cid-baakmyjh> Aug 15, 2025 </time>  </a> </div> </div> <div class="content"> <h1 id="dictsqlite-v137">DictSQLite v1.3.7</h1>
+<p><strong>リリース日</strong>: 2025年8月15日（推定）<br>
+<strong>タイプ</strong>: マイナーリリース</p>
+<h2 id="-主な改善">🚀 主な改善</h2>
+<h3 id="-パフォーマンス向上">⚡ パフォーマンス向上</h3>
+<ul>
+<li><strong>クエリ最適化</strong>: SQLiteクエリの効率化</li>
+<li><strong>メモリ管理</strong>: より効率的なメモリ使用</li>
+<li><strong>I/O処理</strong>: ファイル読み書きの高速化</li>
+</ul>
+<h3 id="-機能拡張">🔧 機能拡張</h3>
+<ul>
+<li><strong>辞書操作の強化</strong>: より豊富な辞書ライクな操作</li>
+<li><strong>エラーハンドリング</strong>: より詳細なエラー情報</li>
+<li><strong>ログ機能</strong>: デバッグ用ログ出力の改善</li>
+</ul>
+<h3 id="️-安定性向上">🛡️ 安定性向上</h3>
+<ul>
+<li><strong>例外処理</strong>: ロバストなエラー処理</li>
+<li><strong>リソース管理</strong>: 適切なリソースクリーンアップ</li>
+<li><strong>並行アクセス</strong>: マルチプロセス環境での安定性</li>
+</ul>
+<h2 id="-使用方法">📖 使用方法</h2>
+<h3 id="基本的な使用">基本的な使用</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#F97583">from</span><span style="color:#E1E4E8"> dictsqlite </span><span style="color:#F97583">import</span><span style="color:#E1E4E8"> DictSQLite</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># データベースの作成</span></span>
+<span class="line"><span style="color:#E1E4E8">db </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> DictSQLite(</span><span style="color:#9ECBFF">'improved.db'</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># 改善されたパフォーマンスでの操作</span></span>
+<span class="line"><span style="color:#E1E4E8">db[</span><span style="color:#9ECBFF">'user_data'</span><span style="color:#E1E4E8">] </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#9ECBFF">    'name'</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">'Alice'</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#9ECBFF">    'preferences'</span><span style="color:#E1E4E8">: [</span><span style="color:#9ECBFF">'python'</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">'sqlite'</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">'json'</span><span style="color:#E1E4E8">],</span></span>
+<span class="line"><span style="color:#9ECBFF">    'settings'</span><span style="color:#E1E4E8">: {</span><span style="color:#9ECBFF">'theme'</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">'dark'</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">'notifications'</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">True</span><span style="color:#E1E4E8">}</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># 高速な検索とアクセス</span></span>
+<span class="line"><span style="color:#E1E4E8">user </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> db[</span><span style="color:#9ECBFF">'user_data'</span><span style="color:#E1E4E8">]</span></span>
+<span class="line"><span style="color:#79B8FF">print</span><span style="color:#E1E4E8">(</span><span style="color:#F97583">f</span><span style="color:#9ECBFF">"User: </span><span style="color:#79B8FF">{</span><span style="color:#E1E4E8">user[</span><span style="color:#9ECBFF">'name'</span><span style="color:#E1E4E8">]</span><span style="color:#79B8FF">}</span><span style="color:#9ECBFF">"</span><span style="color:#E1E4E8">)</span></span></code></pre>
+<h3 id="強化された機能">強化された機能</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#6A737D"># より安定した並行アクセス</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> threading</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">def</span><span style="color:#B392F0"> worker</span><span style="color:#E1E4E8">(db_path, worker_id):</span></span>
+<span class="line"><span style="color:#E1E4E8">    db </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> DictSQLite(db_path)</span></span>
+<span class="line"><span style="color:#E1E4E8">    db[</span><span style="color:#F97583">f</span><span style="color:#9ECBFF">'worker_</span><span style="color:#79B8FF">{</span><span style="color:#E1E4E8">worker_id</span><span style="color:#79B8FF">}</span><span style="color:#9ECBFF">'</span><span style="color:#E1E4E8">] </span><span style="color:#F97583">=</span><span style="color:#F97583"> f</span><span style="color:#9ECBFF">'Data from worker </span><span style="color:#79B8FF">{</span><span style="color:#E1E4E8">worker_id</span><span style="color:#79B8FF">}</span><span style="color:#9ECBFF">'</span></span>
+<span class="line"><span style="color:#E1E4E8">    db.close()</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># 複数スレッドでの安全な操作</span></span>
+<span class="line"><span style="color:#E1E4E8">threads </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> []</span></span>
+<span class="line"><span style="color:#F97583">for</span><span style="color:#E1E4E8"> i </span><span style="color:#F97583">in</span><span style="color:#79B8FF"> range</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">5</span><span style="color:#E1E4E8">):</span></span>
+<span class="line"><span style="color:#E1E4E8">    t </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> threading.Thread(</span><span style="color:#FFAB70">target</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">worker, </span><span style="color:#FFAB70">args</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">'shared.db'</span><span style="color:#E1E4E8">, i))</span></span>
+<span class="line"><span style="color:#E1E4E8">    threads.append(t)</span></span>
+<span class="line"><span style="color:#E1E4E8">    t.start()</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">for</span><span style="color:#E1E4E8"> t </span><span style="color:#F97583">in</span><span style="color:#E1E4E8"> threads:</span></span>
+<span class="line"><span style="color:#E1E4E8">    t.join()</span></span></code></pre>
+<h2 id="-技術的詳細">🔧 技術的詳細</h2>
+<h3 id="アーキテクチャ改善">アーキテクチャ改善</h3>
+<ul>
+<li><strong>SQLite最適化</strong>: より効率的なSQLite使用パターン</li>
+<li><strong>Python統合</strong>: Pythonランタイムとの密接な統合</li>
+<li><strong>メモリ効率</strong>: ガベージコレクションの最適化</li>
+</ul>
+<h3 id="api安定性">API安定性</h3>
+<ul>
+<li><strong>一貫性</strong>: より一貫したAPI動作</li>
+<li><strong>予測可能性</strong>: エラー状況での予測可能な動作</li>
+<li><strong>文書化</strong>: より詳細なドキュメント</li>
+</ul>
+<h2 id="-修正された問題">🐛 修正された問題</h2>
+<h3 id="バグ修正">バグ修正</h3>
+<ul>
+<li><strong>同時アクセス</strong>: 並行アクセス時の競合状態を修正</li>
+<li><strong>メモリリーク</strong>: 長時間実行時のメモリリーク解消</li>
+<li><strong>エラー伝播</strong>: エラー情報の適切な伝播</li>
+</ul>
+<h3 id="安定性改善">安定性改善</h3>
+<ul>
+<li><strong>例外安全性</strong>: 例外発生時のデータ整合性保証</li>
+<li><strong>リソース解放</strong>: 適切なリソース管理</li>
+<li><strong>データ整合性</strong>: データ破損防止機能</li>
+</ul>
+<h2 id="-パフォーマンス指標">📊 パフォーマンス指標</h2>
+<h3 id="改善された性能">改善された性能</h3>
+<ul>
+<li><strong>読み込み速度</strong>: 約15%向上</li>
+<li><strong>書き込み速度</strong>: 約20%向上</li>
+<li><strong>メモリ使用量</strong>: 約10%削減</li>
+</ul>
+<h3 id="ベンチマーク">ベンチマーク</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#6A737D"># パフォーマンステスト例</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> time</span></span>
+<span class="line"><span style="color:#F97583">from</span><span style="color:#E1E4E8"> dictsqlite </span><span style="color:#F97583">import</span><span style="color:#E1E4E8"> DictSQLite</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">db </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> DictSQLite(</span><span style="color:#9ECBFF">'benchmark.db'</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># 大量データの書き込みテスト</span></span>
+<span class="line"><span style="color:#E1E4E8">start_time </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> time.time()</span></span>
+<span class="line"><span style="color:#F97583">for</span><span style="color:#E1E4E8"> i </span><span style="color:#F97583">in</span><span style="color:#79B8FF"> range</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">10000</span><span style="color:#E1E4E8">):</span></span>
+<span class="line"><span style="color:#E1E4E8">    db[</span><span style="color:#F97583">f</span><span style="color:#9ECBFF">'key_</span><span style="color:#79B8FF">{</span><span style="color:#E1E4E8">i</span><span style="color:#79B8FF">}</span><span style="color:#9ECBFF">'</span><span style="color:#E1E4E8">] </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> {</span><span style="color:#9ECBFF">'value'</span><span style="color:#E1E4E8">: i, </span><span style="color:#9ECBFF">'data'</span><span style="color:#E1E4E8">: </span><span style="color:#F97583">f</span><span style="color:#9ECBFF">'test_data_</span><span style="color:#79B8FF">{</span><span style="color:#E1E4E8">i</span><span style="color:#79B8FF">}</span><span style="color:#9ECBFF">'</span><span style="color:#E1E4E8">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">write_time </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> time.time() </span><span style="color:#F97583">-</span><span style="color:#E1E4E8"> start_time</span></span>
+<span class="line"><span style="color:#79B8FF">print</span><span style="color:#E1E4E8">(</span><span style="color:#F97583">f</span><span style="color:#9ECBFF">"10000件の書き込み時間: </span><span style="color:#79B8FF">{</span><span style="color:#E1E4E8">write_time</span><span style="color:#F97583">:.2f</span><span style="color:#79B8FF">}</span><span style="color:#9ECBFF">秒"</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># 読み込みテスト</span></span>
+<span class="line"><span style="color:#E1E4E8">start_time </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> time.time()</span></span>
+<span class="line"><span style="color:#F97583">for</span><span style="color:#E1E4E8"> i </span><span style="color:#F97583">in</span><span style="color:#79B8FF"> range</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">0</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">10000</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">100</span><span style="color:#E1E4E8">):</span></span>
+<span class="line"><span style="color:#E1E4E8">    _ </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> db[</span><span style="color:#F97583">f</span><span style="color:#9ECBFF">'key_</span><span style="color:#79B8FF">{</span><span style="color:#E1E4E8">i</span><span style="color:#79B8FF">}</span><span style="color:#9ECBFF">'</span><span style="color:#E1E4E8">]</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">read_time </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> time.time() </span><span style="color:#F97583">-</span><span style="color:#E1E4E8"> start_time</span></span>
+<span class="line"><span style="color:#79B8FF">print</span><span style="color:#E1E4E8">(</span><span style="color:#F97583">f</span><span style="color:#9ECBFF">"100件の読み込み時間: </span><span style="color:#79B8FF">{</span><span style="color:#E1E4E8">read_time</span><span style="color:#F97583">:.2f</span><span style="color:#79B8FF">}</span><span style="color:#9ECBFF">秒"</span><span style="color:#E1E4E8">)</span></span></code></pre>
+<h2 id="-アップグレード">🔧 アップグレード</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">pip</span><span style="color:#9ECBFF"> install</span><span style="color:#9ECBFF"> dictsqlite</span><span style="color:#79B8FF"> -U</span></span></code></pre>
+<h3 id="互換性">互換性</h3>
+<ul>
+<li><strong>完全な後方互換性</strong>: 既存のコードは変更不要</li>
+<li><strong>データベース形式</strong>: 既存のデータベースファイルをそのまま使用可能</li>
+<li><strong>API変更</strong>: なし</li>
+</ul>
+<h2 id="-次のバージョンに向けて">🔗 次のバージョンに向けて</h2>
+<h3 id="準備中の機能">準備中の機能</h3>
+<ul>
+<li><strong>暗号化強化</strong>: より強固な暗号化オプション</li>
+<li><strong>インデックス機能</strong>: 高速検索のためのインデックス</li>
+<li><strong>バックアップ機能</strong>: 自動バックアップとリストア</li>
+</ul>
+<h3 id="フィードバック">フィードバック</h3>
+<p>このバージョンの改善に向けて、ユーザーフィードバックを歓迎します：</p>
+<ul>
+<li><strong>GitHub Issues</strong>: バグ報告と機能要求</li>
+<li><strong>パフォーマンス</strong>: 実際の使用でのパフォーマンス報告</li>
+<li><strong>使用事例</strong>: 具体的な使用シナリオの共有</li>
+</ul>
+<hr>
+<p>このリリースは、安定性とパフォーマンスの向上に重点を置いた重要なアップデートです。</p> </div> </li><li class="post"> <div class="version_wrapper"> <div class="version_info"> <a href="/releases/v133"> <div class="version_number">1.3.3</div> <time datetime="2025-08-01T00:00:00.000Z" class="date astro-baakmyjh" data-astro-cid-baakmyjh> Aug 1, 2025 </time>  </a> </div> </div> <div class="content"> <h1 id="dictsqlite-v133">DictSQLite v1.3.3</h1>
+<p><strong>リリース日</strong>: 2025年8月1日（推定）<br>
+<strong>タイプ</strong>: パッチリリース</p>
+<h2 id="️-基本機能の確立">🏗️ 基本機能の確立</h2>
+<h3 id="-コア機能">💾 コア機能</h3>
+<ul>
+<li><strong>辞書風インターフェース</strong>: SQLiteを辞書のように操作する基本機能</li>
+<li><strong>キー・バリュー操作</strong>: 基本的なget/set/delete操作</li>
+<li><strong>データ永続化</strong>: 自動的なSQLiteファイルへの保存</li>
+</ul>
+<h3 id="-基本api">🔧 基本API</h3>
+<ul>
+<li><strong><code>__getitem__</code></strong> / <strong><code>__setitem__</code></strong>: 辞書風のアクセス</li>
+<li><strong><code>__delitem__</code></strong>: キーの削除</li>
+<li><strong><code>__contains__</code></strong>: キー存在確認</li>
+<li><strong><code>keys()</code></strong> / <strong><code>values()</code></strong> / <strong><code>items()</code></strong>: 辞書メソッド</li>
+</ul>
+<h2 id="-使用方法">📖 使用方法</h2>
+<h3 id="基本的な操作">基本的な操作</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#F97583">from</span><span style="color:#E1E4E8"> dictsqlite </span><span style="color:#F97583">import</span><span style="color:#E1E4E8"> DictSQLite</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># データベースファイルの作成</span></span>
+<span class="line"><span style="color:#E1E4E8">db </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> DictSQLite(</span><span style="color:#9ECBFF">'mydata.db'</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># 基本的なデータ操作</span></span>
+<span class="line"><span style="color:#E1E4E8">db[</span><span style="color:#9ECBFF">'name'</span><span style="color:#E1E4E8">] </span><span style="color:#F97583">=</span><span style="color:#9ECBFF"> 'Alice'</span></span>
+<span class="line"><span style="color:#E1E4E8">db[</span><span style="color:#9ECBFF">'age'</span><span style="color:#E1E4E8">] </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> 30</span></span>
+<span class="line"><span style="color:#E1E4E8">db[</span><span style="color:#9ECBFF">'active'</span><span style="color:#E1E4E8">] </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> True</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># データの読み取り</span></span>
+<span class="line"><span style="color:#79B8FF">print</span><span style="color:#E1E4E8">(db[</span><span style="color:#9ECBFF">'name'</span><span style="color:#E1E4E8">])  </span><span style="color:#6A737D"># 'Alice'</span></span>
+<span class="line"><span style="color:#79B8FF">print</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">'age'</span><span style="color:#F97583"> in</span><span style="color:#E1E4E8"> db)  </span><span style="color:#6A737D"># True</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># データの削除</span></span>
+<span class="line"><span style="color:#F97583">del</span><span style="color:#E1E4E8"> db[</span><span style="color:#9ECBFF">'active'</span><span style="color:#E1E4E8">]</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># すべてのキーの取得</span></span>
+<span class="line"><span style="color:#F97583">for</span><span style="color:#E1E4E8"> key </span><span style="color:#F97583">in</span><span style="color:#E1E4E8"> db.keys():</span></span>
+<span class="line"><span style="color:#79B8FF">    print</span><span style="color:#E1E4E8">(</span><span style="color:#F97583">f</span><span style="color:#9ECBFF">"</span><span style="color:#79B8FF">{</span><span style="color:#E1E4E8">key</span><span style="color:#79B8FF">}</span><span style="color:#9ECBFF">: </span><span style="color:#79B8FF">{</span><span style="color:#E1E4E8">db[key]</span><span style="color:#79B8FF">}</span><span style="color:#9ECBFF">"</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># データベースのクローズ</span></span>
+<span class="line"><span style="color:#E1E4E8">db.close()</span></span></code></pre>
+<h3 id="複合データの保存">複合データの保存</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#6A737D"># 辞書やリストの保存</span></span>
+<span class="line"><span style="color:#E1E4E8">db[</span><span style="color:#9ECBFF">'user_info'</span><span style="color:#E1E4E8">] </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#9ECBFF">    'name'</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">'Bob'</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#9ECBFF">    'hobbies'</span><span style="color:#E1E4E8">: [</span><span style="color:#9ECBFF">'reading'</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">'coding'</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">'music'</span><span style="color:#E1E4E8">],</span></span>
+<span class="line"><span style="color:#9ECBFF">    'address'</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#9ECBFF">        'city'</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">'Tokyo'</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#9ECBFF">        'zip'</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">'123-4567'</span></span>
+<span class="line"><span style="color:#E1E4E8">    }</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># ネストされたデータの取得</span></span>
+<span class="line"><span style="color:#E1E4E8">user </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> db[</span><span style="color:#9ECBFF">'user_info'</span><span style="color:#E1E4E8">]</span></span>
+<span class="line"><span style="color:#79B8FF">print</span><span style="color:#E1E4E8">(user[</span><span style="color:#9ECBFF">'address'</span><span style="color:#E1E4E8">][</span><span style="color:#9ECBFF">'city'</span><span style="color:#E1E4E8">])  </span><span style="color:#6A737D"># 'Tokyo'</span></span></code></pre>
+<h2 id="-技術的詳細">🔧 技術的詳細</h2>
+<h3 id="データ保存方式">データ保存方式</h3>
+<ul>
+<li><strong>Pickle serialization</strong>: Pythonオブジェクトの直接保存</li>
+<li><strong>SQLite backend</strong>: 信頼性の高いSQLiteデータベース</li>
+<li><strong>自動型変換</strong>: Python型の自動的な保存・復元</li>
+</ul>
+<h3 id="ファイル構造">ファイル構造</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="sql"><code><span class="line"><span style="color:#6A737D">-- 自動生成されるテーブル構造</span></span>
+<span class="line"><span style="color:#F97583">CREATE</span><span style="color:#F97583"> TABLE</span><span style="color:#B392F0"> IF</span><span style="color:#F97583"> NOT</span><span style="color:#F97583"> EXISTS</span><span style="color:#F97583"> data</span><span style="color:#E1E4E8"> (</span></span>
+<span class="line"><span style="color:#F97583">    key</span><span style="color:#F97583"> TEXT</span><span style="color:#F97583"> PRIMARY KEY</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#F97583">    value</span><span style="color:#E1E4E8"> BLOB</span></span>
+<span class="line"><span style="color:#E1E4E8">);</span></span></code></pre>
+<h3 id="エラーハンドリング">エラーハンドリング</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#6A737D"># キーが存在しない場合</span></span>
+<span class="line"><span style="color:#F97583">try</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#E1E4E8">    value </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> db[</span><span style="color:#9ECBFF">'nonexistent_key'</span><span style="color:#E1E4E8">]</span></span>
+<span class="line"><span style="color:#F97583">except</span><span style="color:#79B8FF"> KeyError</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#79B8FF">    print</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"キーが見つかりません"</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># より安全なアクセス</span></span>
+<span class="line"><span style="color:#E1E4E8">value </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> db.get(</span><span style="color:#9ECBFF">'maybe_key'</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">'default_value'</span><span style="color:#E1E4E8">)</span></span></code></pre>
+<h2 id="️-安定性と制限">🛡️ 安定性と制限</h2>
+<h3 id="安定した機能">安定した機能</h3>
+<ul>
+<li><strong>基本的なCRUD操作</strong>: 読み書き削除は安定</li>
+<li><strong>データ永続性</strong>: ファイル保存は確実</li>
+<li><strong>型サポート</strong>: 基本的なPython型をサポート</li>
+</ul>
+<h3 id="現在の制限">現在の制限</h3>
+<ul>
+<li><strong>並行アクセス</strong>: 複数プロセスからの同時アクセスは未対応</li>
+<li><strong>暗号化</strong>: データ暗号化機能なし</li>
+<li><strong>トランザクション</strong>: 高度なトランザクション機能なし</li>
+<li><strong>インデックス</strong>: 検索最適化機能なし</li>
+</ul>
+<h2 id="-パフォーマンス特性">📊 パフォーマンス特性</h2>
+<h3 id="適用範囲">適用範囲</h3>
+<ul>
+<li><strong>小〜中規模データ</strong>: 数千〜数万件のレコード</li>
+<li><strong>シンプルな用途</strong>: 設定ファイル、キャッシュ、簡単なデータ保存</li>
+<li><strong>単一プロセス</strong>: 一つのプロセスからのアクセス</li>
+</ul>
+<h3 id="ベンチマーク例">ベンチマーク例</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> time</span></span>
+<span class="line"><span style="color:#F97583">from</span><span style="color:#E1E4E8"> dictsqlite </span><span style="color:#F97583">import</span><span style="color:#E1E4E8"> DictSQLite</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># 基本的なパフォーマンステスト</span></span>
+<span class="line"><span style="color:#E1E4E8">db </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> DictSQLite(</span><span style="color:#9ECBFF">'test.db'</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># 書き込み性能</span></span>
+<span class="line"><span style="color:#E1E4E8">start </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> time.time()</span></span>
+<span class="line"><span style="color:#F97583">for</span><span style="color:#E1E4E8"> i </span><span style="color:#F97583">in</span><span style="color:#79B8FF"> range</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">1000</span><span style="color:#E1E4E8">):</span></span>
+<span class="line"><span style="color:#E1E4E8">    db[</span><span style="color:#F97583">f</span><span style="color:#9ECBFF">'key_</span><span style="color:#79B8FF">{</span><span style="color:#E1E4E8">i</span><span style="color:#79B8FF">}</span><span style="color:#9ECBFF">'</span><span style="color:#E1E4E8">] </span><span style="color:#F97583">=</span><span style="color:#F97583"> f</span><span style="color:#9ECBFF">'value_</span><span style="color:#79B8FF">{</span><span style="color:#E1E4E8">i</span><span style="color:#79B8FF">}</span><span style="color:#9ECBFF">'</span></span>
+<span class="line"><span style="color:#E1E4E8">write_time </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> time.time() </span><span style="color:#F97583">-</span><span style="color:#E1E4E8"> start</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># 読み込み性能</span></span>
+<span class="line"><span style="color:#E1E4E8">start </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> time.time()</span></span>
+<span class="line"><span style="color:#F97583">for</span><span style="color:#E1E4E8"> i </span><span style="color:#F97583">in</span><span style="color:#79B8FF"> range</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">1000</span><span style="color:#E1E4E8">):</span></span>
+<span class="line"><span style="color:#E1E4E8">    _ </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> db[</span><span style="color:#F97583">f</span><span style="color:#9ECBFF">'key_</span><span style="color:#79B8FF">{</span><span style="color:#E1E4E8">i</span><span style="color:#79B8FF">}</span><span style="color:#9ECBFF">'</span><span style="color:#E1E4E8">]</span></span>
+<span class="line"><span style="color:#E1E4E8">read_time </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> time.time() </span><span style="color:#F97583">-</span><span style="color:#E1E4E8"> start</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF">print</span><span style="color:#E1E4E8">(</span><span style="color:#F97583">f</span><span style="color:#9ECBFF">"書き込み: </span><span style="color:#79B8FF">{</span><span style="color:#E1E4E8">write_time</span><span style="color:#F97583">:.2f</span><span style="color:#79B8FF">}</span><span style="color:#9ECBFF">s, 読み込み: </span><span style="color:#79B8FF">{</span><span style="color:#E1E4E8">read_time</span><span style="color:#F97583">:.2f</span><span style="color:#79B8FF">}</span><span style="color:#9ECBFF">s"</span><span style="color:#E1E4E8">)</span></span></code></pre>
+<h2 id="-インストールと要件">🔧 インストールと要件</h2>
+<h3 id="インストール">インストール</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">pip</span><span style="color:#9ECBFF"> install</span><span style="color:#9ECBFF"> dictsqlite==</span><span style="color:#79B8FF">1.3.3</span></span></code></pre>
+<h3 id="依存関係">依存関係</h3>
+<ul>
+<li><strong>Python 3.7+</strong>: Python 3.7以上が必要</li>
+<li><strong>SQLite3</strong>: Pythonの標準ライブラリ（追加インストール不要）</li>
+</ul>
+<h2 id="-既知の問題">🔍 既知の問題</h2>
+<h3 id="制限事項">制限事項</h3>
+<ul>
+<li><strong>Large objects</strong>: 非常に大きなオブジェクトでの性能低下</li>
+<li><strong>Complex objects</strong>: 一部の複雑なオブジェクトで保存エラー</li>
+<li><strong>File locking</strong>: ファイルロック機能の不完全性</li>
+</ul>
+<h3 id="回避策">回避策</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#6A737D"># 大きなデータの分割保存</span></span>
+<span class="line"><span style="color:#E1E4E8">large_data </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> list</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">range</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">100000</span><span style="color:#E1E4E8">))</span></span>
+<span class="line"><span style="color:#E1E4E8">chunk_size </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> 1000</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">for</span><span style="color:#E1E4E8"> i, chunk_start </span><span style="color:#F97583">in</span><span style="color:#79B8FF"> enumerate</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">range</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">0</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">len</span><span style="color:#E1E4E8">(large_data), chunk_size)):</span></span>
+<span class="line"><span style="color:#E1E4E8">    chunk </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> large_data[chunk_start:chunk_start </span><span style="color:#F97583">+</span><span style="color:#E1E4E8"> chunk_size]</span></span>
+<span class="line"><span style="color:#E1E4E8">    db[</span><span style="color:#F97583">f</span><span style="color:#9ECBFF">'chunk_</span><span style="color:#79B8FF">{</span><span style="color:#E1E4E8">i</span><span style="color:#79B8FF">}</span><span style="color:#9ECBFF">'</span><span style="color:#E1E4E8">] </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> chunk</span></span></code></pre>
+<h2 id="-将来の計画">🚀 将来の計画</h2>
+<h3 id="次バージョンでの改善予定">次バージョンでの改善予定</h3>
+<ul>
+<li><strong>並行アクセス対応</strong>: ファイルロック機能</li>
+<li><strong>暗号化機能</strong>: データ保護オプション</li>
+<li><strong>パフォーマンス向上</strong>: より高速な操作</li>
+<li><strong>エラー処理</strong>: より詳細なエラー情報</li>
+</ul>
+<hr>
+<p>DictSQLite v1.3.3は、プロジェクトの基礎を築く重要な初期リリースです。シンプルで使いやすいAPIを提供し、将来の機能拡張への基盤を確立しています。</p> </div> </li> </ul> </main>  <footer> <p>© 2025 Disnana. All rights reserved.</p> <div class="footer_links"> <a href="https://discord.gg/KzeHDrgwAz" target="_blank" rel="noopener noreferrer">Discord</a> <a href="https://x.com/PythonHaru" target="_blank" rel="noopener noreferrer">X</a> <a href="https://github.com/disnana/DictSQLite" target="_blank" rel="noopener noreferrer">GitHub</a> </div> </footer> </body></html>

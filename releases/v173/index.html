@@ -1,0 +1,149 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><!-- Page Metadata --><link rel="canonical" href="https://example.com/releases/v173/"><meta name="description" content="v2.0への準備版 - Pydantic統合とWALモード実装"><!-- OpenGraph Tags --><meta property="og:title" content="DictSQLite v1.7.3"><meta property="og:type" content="website"><meta property="og:url" content="https://example.com/releases/v173/"><meta property="og:locale" content="en"><meta property="og:description" content="v2.0への準備版 - Pydantic統合とWALモード実装"><meta property="og:site_name" content="DictSQLite"><meta property="og:image" content="/_astro/starlog-placeholder-1.D1Ad2KDX.jpg"><meta property="og:image:alt" content="Astro ロゴ全体"><!-- Twitter Tags --><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site"><meta name="twitter:title" content="DictSQLite v1.7.3"><meta name="twitter:description" content="v2.0への準備版 - Pydantic統合とWALモード実装"><meta name="twitter:image" content="/_astro/starlog-placeholder-1.D1Ad2KDX.jpg"><meta name="twitter:image:alt" content="Astro ロゴ全体"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Source+Code+Pro&display=swap" rel="stylesheet"><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="animate"><script type="module" src="/_astro/ClientRouter.astro_astro_type_script_index_0_lang.B3vRBseb.js"></script><link rel="stylesheet" href="/_astro/index.WEhioEny.css">
+<style>time[data-astro-cid-baakmyjh]{display:block}@keyframes astroFadeInOut{0%{opacity:1}to{opacity:0}}@keyframes astroFadeIn{0%{opacity:0;mix-blend-mode:plus-lighter}to{opacity:1;mix-blend-mode:plus-lighter}}@keyframes astroFadeOut{0%{opacity:1;mix-blend-mode:plus-lighter}to{opacity:0;mix-blend-mode:plus-lighter}}@keyframes astroSlideFromRight{0%{transform:translate(100%)}}@keyframes astroSlideFromLeft{0%{transform:translate(-100%)}}@keyframes astroSlideToRight{to{transform:translate(100%)}}@keyframes astroSlideToLeft{to{transform:translate(-100%)}}@media (prefers-reduced-motion){::view-transition-group(*),::view-transition-old(*),::view-transition-new(*){animation:none!important}[data-astro-transition-scope]{animation:none!important}}
+</style><style>[data-astro-transition-scope="astro-jpx3f7vy-1"] { view-transition-name: post; }@layer astro { ::view-transition-old(post) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }::view-transition-new(post) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back]::view-transition-old(post) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back]::view-transition-new(post) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; } }[data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-jpx3f7vy-1"],
+			[data-astro-transition-fallback="old"][data-astro-transition-scope="astro-jpx3f7vy-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-jpx3f7vy-1"],
+			[data-astro-transition-fallback="new"][data-astro-transition-scope="astro-jpx3f7vy-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back][data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-jpx3f7vy-1"],
+			[data-astro-transition=back][data-astro-transition-fallback="old"][data-astro-transition-scope="astro-jpx3f7vy-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back][data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-jpx3f7vy-1"],
+			[data-astro-transition=back][data-astro-transition-fallback="new"][data-astro-transition-scope="astro-jpx3f7vy-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }</style></head><body> <div class="glow"></div> <header data-astro-cid-3ef6ksr2> <nav data-astro-cid-3ef6ksr2> <h2 id="site_title" data-astro-cid-3ef6ksr2> <a href="/" data-astro-cid-3ef6ksr2> <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" data-astro-cid-3ef6ksr2><path fill="url(#a)" fill-rule="evenodd" d="M.654 3.276C0 4.56 0 6.24 0 9.6v4.8c0 3.36 0 5.04.654 6.324a6 6 0 0 0 2.622 2.622C4.56 24 6.24 24 9.6 24h4.8c3.36 0 5.04 0 6.324-.654a6 6 0 0 0 2.622-2.622C24 19.44 24 17.76 24 14.4V9.6c0-3.36 0-5.04-.654-6.324A6 6 0 0 0 20.724.654C19.44 0 17.76 0 14.4 0H9.6C6.24 0 4.56 0 3.276.654A6 6 0 0 0 .654 3.276Zm10.875 16.41a.5.5 0 0 0 .942 0l.628-1.754a8 8 0 0 1 4.833-4.833l1.754-.628a.5.5 0 0 0 0-.942l-1.754-.628A8 8 0 0 1 13.1 6.068l-.628-1.754a.5.5 0 0 0-.942 0l-.628 1.754A8 8 0 0 1 6.068 10.9l-1.754.628a.5.5 0 0 0 0 .942l1.754.628a8 8 0 0 1 4.833 4.833l.628 1.754Z" clip-rule="evenodd" data-astro-cid-3ef6ksr2></path><path stroke="url(#b)" stroke-opacity=".5" stroke-width=".5" d="M.25 9.6c0-1.684 0-2.932.08-3.92.081-.985.24-1.69.547-2.29A5.75 5.75 0 0 1 3.39.877C3.99.57 4.695.41 5.68.33 6.668.25 7.916.25 9.6.25h4.8c1.684 0 2.932 0 3.92.08.985.081 1.69.24 2.29.547a5.75 5.75 0 0 1 2.513 2.513c.306.6.466 1.305.546 2.29.08.988.081 2.236.081 3.92v4.8c0 1.684 0 2.932-.08 3.92-.081.985-.24 1.69-.547 2.29a5.75 5.75 0 0 1-2.513 2.513c-.6.306-1.305.466-2.29.546-.988.08-2.236.081-3.92.081H9.6c-1.684 0-2.932 0-3.92-.08-.985-.081-1.69-.24-2.29-.547A5.75 5.75 0 0 1 .877 20.61C.57 20.01.41 19.305.33 18.32.25 17.332.25 16.084.25 14.4V9.6Zm11.044 10.17c.237.663 1.175.663 1.412 0l.628-1.753a7.75 7.75 0 0 1 4.683-4.683l1.753-.628c.663-.237.663-1.175 0-1.412l-1.753-.628a7.75 7.75 0 0 1-4.683-4.683l-.628-1.753c-.237-.663-1.175-.663-1.412 0l-.628 1.753a7.75 7.75 0 0 1-4.683 4.683l-1.753.628c-.663.237-.663 1.175 0 1.412l1.753.628a7.75 7.75 0 0 1 4.683 4.683l.628 1.753Z" data-astro-cid-3ef6ksr2></path><defs data-astro-cid-3ef6ksr2><radialGradient id="a" cx="0" cy="0" r="1" gradientTransform="rotate(-40.136 32.164 11.75) scale(33.3542)" gradientUnits="userSpaceOnUse" data-astro-cid-3ef6ksr2><stop offset=".639" stop-color="#9818E7" data-astro-cid-3ef6ksr2></stop><stop offset="1" stop-color="#DF7F4F" data-astro-cid-3ef6ksr2></stop></radialGradient><linearGradient id="b" x1="12" x2="12" y1="0" y2="24" gradientUnits="userSpaceOnUse" data-astro-cid-3ef6ksr2><stop stop-color="#fff" data-astro-cid-3ef6ksr2></stop><stop offset="1" stop-color="#fff" stop-opacity="0" data-astro-cid-3ef6ksr2></stop></linearGradient></defs></svg> DictSQLite </a> </h2> <div class="links" data-astro-cid-3ef6ksr2> <a href="mailto:support@disnana.com" data-astro-cid-3ef6ksr2>お問い合わせ</a> </div> </nav> </header>  <div class="post single" data-astro-transition-persist="post" data-astro-transition-scope="astro-jpx3f7vy-1"> <div class="version_wrapper"> <div class="version_info"> <div class="version_number">1.7.3</div> <time datetime="2025-09-10T00:00:00.000Z" class="date astro-baakmyjh" data-astro-cid-baakmyjh> Sep 10, 2025 </time>  </div> </div> <div class="content">  <h1 id="dictsqlite-v173">DictSQLite v1.7.3</h1>
+<p><strong>リリース日</strong>: 2025年9月10日（推定）<br>
+<strong>タイプ</strong>: マイナーリリース</p>
+<h2 id="-新機能">🚀 新機能</h2>
+<h3 id="-pydantic統合">🔗 Pydantic統合</h3>
+<ul>
+<li><strong>Pydanticモデルサポート</strong>: BaseModelを直接保存可能に</li>
+<li><strong>型安全性</strong>: Pydanticによる厳密な型チェック</li>
+<li><strong>自動シリアライゼーション</strong>: モデルの自動的な保存・読み込み</li>
+</ul>
+<h3 id="️-データベースエンジン改善">🗄️ データベースエンジン改善</h3>
+<ul>
+<li><strong>WAL (Write-Ahead Logging) モード</strong>: パフォーマンス向上のためのWALモード実装</li>
+<li><strong>Journal Mode設定</strong>: カスタマイズ可能なジャーナルモード</li>
+<li><strong>Version 2プロトコル</strong>: 次世代データベースフォーマットへの準備</li>
+</ul>
+<h3 id="-expiringdict強化">⏰ ExpiringDict強化</h3>
+<ul>
+<li><strong>期限付きデータ</strong>: 自動期限切れ機能の改善</li>
+<li><strong>テーブル内期限切れ</strong>: テーブル内でのexpiring_dict使用</li>
+</ul>
+<h2 id="-使用方法">📖 使用方法</h2>
+<h3 id="pydanticモデルの使用">Pydanticモデルの使用</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#F97583">from</span><span style="color:#E1E4E8"> dictsqlite </span><span style="color:#F97583">import</span><span style="color:#E1E4E8"> DictSQLite</span></span>
+<span class="line"><span style="color:#F97583">from</span><span style="color:#E1E4E8"> pydantic </span><span style="color:#F97583">import</span><span style="color:#E1E4E8"> BaseModel</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">class</span><span style="color:#B392F0"> Example</span><span style="color:#E1E4E8">(</span><span style="color:#B392F0">BaseModel</span><span style="color:#E1E4E8">):</span></span>
+<span class="line"><span style="color:#E1E4E8">    name: </span><span style="color:#79B8FF">str</span></span>
+<span class="line"><span style="color:#E1E4E8">    age: </span><span style="color:#79B8FF">int</span></span>
+<span class="line"><span style="color:#E1E4E8">    is_student: </span><span style="color:#79B8FF">bool</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># データベース初期化（v2プロトコル）</span></span>
+<span class="line"><span style="color:#E1E4E8">db </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> DictSQLite(</span><span style="color:#9ECBFF">"example_v2.db"</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">version</span><span style="color:#F97583">=</span><span style="color:#79B8FF">2</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">journal_mode</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"WAL"</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># Pydanticモデルの保存</span></span>
+<span class="line"><span style="color:#E1E4E8">user </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> Example(</span><span style="color:#FFAB70">name</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"Alice"</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">age</span><span style="color:#F97583">=</span><span style="color:#79B8FF">30</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">is_student</span><span style="color:#F97583">=</span><span style="color:#79B8FF">False</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#E1E4E8">db[</span><span style="color:#9ECBFF">"users"</span><span style="color:#E1E4E8">][</span><span style="color:#9ECBFF">"alice"</span><span style="color:#E1E4E8">] </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> user</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># データの取得</span></span>
+<span class="line"><span style="color:#79B8FF">print</span><span style="color:#E1E4E8">(db[</span><span style="color:#9ECBFF">"users"</span><span style="color:#E1E4E8">][</span><span style="color:#9ECBFF">"alice"</span><span style="color:#E1E4E8">])  </span><span style="color:#6A737D"># Pydanticモデルとして復元</span></span></code></pre>
+<h3 id="walモードの活用">WALモードの活用</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#6A737D"># WALモードでパフォーマンス向上</span></span>
+<span class="line"><span style="color:#E1E4E8">db </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> DictSQLite(</span><span style="color:#9ECBFF">"fast.db"</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">journal_mode</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"WAL"</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># 大量データの効率的な処理</span></span>
+<span class="line"><span style="color:#F97583">for</span><span style="color:#E1E4E8"> i </span><span style="color:#F97583">in</span><span style="color:#79B8FF"> range</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">1000</span><span style="color:#E1E4E8">):</span></span>
+<span class="line"><span style="color:#E1E4E8">    db[</span><span style="color:#F97583">f</span><span style="color:#9ECBFF">"data_</span><span style="color:#79B8FF">{</span><span style="color:#E1E4E8">i</span><span style="color:#79B8FF">}</span><span style="color:#9ECBFF">"</span><span style="color:#E1E4E8">] </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> {</span><span style="color:#9ECBFF">"value"</span><span style="color:#E1E4E8">: i, </span><span style="color:#9ECBFF">"processed"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">True</span><span style="color:#E1E4E8">}</span></span></code></pre>
+<h3 id="テーブル機能の強化">テーブル機能の強化</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#6A737D"># テーブル作成と管理</span></span>
+<span class="line"><span style="color:#E1E4E8">db.create_table(</span><span style="color:#9ECBFF">"users"</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#E1E4E8">db[</span><span style="color:#9ECBFF">"users"</span><span style="color:#E1E4E8">][</span><span style="color:#9ECBFF">"key1"</span><span style="color:#E1E4E8">] </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> (</span><span style="color:#79B8FF">1</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">2</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">3</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#E1E4E8">db[</span><span style="color:#9ECBFF">"users"</span><span style="color:#E1E4E8">][</span><span style="color:#9ECBFF">"key2"</span><span style="color:#E1E4E8">] </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> {</span><span style="color:#9ECBFF">"nested"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"data"</span><span style="color:#E1E4E8">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># 期限付きデータの活用</span></span>
+<span class="line"><span style="color:#E1E4E8">db[</span><span style="color:#9ECBFF">"users"</span><span style="color:#E1E4E8">][</span><span style="color:#9ECBFF">"temp_data"</span><span style="color:#E1E4E8">] </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> dictsqlite.expiring_dict(</span><span style="color:#79B8FF">3</span><span style="color:#E1E4E8">)  </span><span style="color:#6A737D"># 3秒で期限切れ</span></span>
+<span class="line"><span style="color:#E1E4E8">db[</span><span style="color:#9ECBFF">"users"</span><span style="color:#E1E4E8">][</span><span style="color:#9ECBFF">"temp_data"</span><span style="color:#E1E4E8">][</span><span style="color:#9ECBFF">"session"</span><span style="color:#E1E4E8">] </span><span style="color:#F97583">=</span><span style="color:#9ECBFF"> "temporary_session_data"</span></span></code></pre>
+<h2 id="-技術的改善">🔧 技術的改善</h2>
+<h3 id="データベースアーキテクチャ">データベースアーキテクチャ</h3>
+<ul>
+<li><strong>Version 2プロトコル</strong>: より効率的なデータ保存形式</li>
+<li><strong>WAL最適化</strong>: 並行読み書きパフォーマンスの向上</li>
+<li><strong>メモリ効率</strong>: より少ないメモリ使用量</li>
+</ul>
+<h3 id="型システム">型システム</h3>
+<ul>
+<li><strong>Pydantic互換性</strong>: 厳密な型チェックとバリデーション</li>
+<li><strong>自動変換</strong>: Pythonオブジェクトとデータベース間の自動変換</li>
+<li><strong>スキーマ validation</strong>: データ整合性の保証</li>
+</ul>
+<h2 id="️-重要な変更">⚠️ 重要な変更</h2>
+<h3 id="新機能について">新機能について</h3>
+<ul>
+<li><strong>Version パラメータ</strong>: <code>version=2</code> は次世代フォーマット</li>
+<li><strong>Journal Mode</strong>: WALモード使用時の並行アクセス改善</li>
+<li><strong>Pydantic依存</strong>: Pydanticモデル使用時は pydantic のインストールが必要</li>
+</ul>
+<h3 id="互換性">互換性</h3>
+<ul>
+<li><strong>後方互換</strong>: 既存のv1データベースはそのまま使用可能</li>
+<li><strong>段階的移行</strong>: 必要に応じてv2フォーマットに移行可能</li>
+</ul>
+<h2 id="-依存関係">📦 依存関係</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#6A737D"># 基本インストール</span></span>
+<span class="line"><span style="color:#B392F0">pip</span><span style="color:#9ECBFF"> install</span><span style="color:#9ECBFF"> dictsqlite</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># Pydantic使用時</span></span>
+<span class="line"><span style="color:#B392F0">pip</span><span style="color:#9ECBFF"> install</span><span style="color:#9ECBFF"> dictsqlite[pydantic]</span></span>
+<span class="line"><span style="color:#6A737D"># または</span></span>
+<span class="line"><span style="color:#B392F0">pip</span><span style="color:#9ECBFF"> install</span><span style="color:#9ECBFF"> dictsqlite</span><span style="color:#9ECBFF"> pydantic</span></span></code></pre>
+<h2 id="-テスト機能">🧪 テスト機能</h2>
+<h3 id="実験的機能">実験的機能</h3>
+<ul>
+<li><strong>Version 2 Database</strong>: 次世代データベースフォーマット</li>
+<li><strong>高度な期限切れ</strong>: テーブル内での複雑な期限管理</li>
+<li><strong>Pydantic統合</strong>: モデルベースのデータ管理</li>
+</ul>
+<h3 id="制限事項">制限事項</h3>
+<ul>
+<li><strong>Version 2</strong>: まだ実験段階の機能</li>
+<li><strong>WAL Mode</strong>: 一部の環境で制限あり</li>
+<li><strong>Pydantic</strong>: 追加の依存関係が必要</li>
+</ul>
+<h2 id="-準備されている機能">🔗 準備されている機能</h2>
+<p>このバージョンは v2.0 リリースへの準備版として：</p>
+<ul>
+<li>次世代データベースエンジンのテスト</li>
+<li>Pydantic統合の実証</li>
+<li>WALモードの安定性確認</li>
+</ul>
+<hr>
+<p>このリリースは将来の大型アップデートへの重要な準備段階を示しています。</p>  </div> </div> <footer> <p>© 2025 Disnana. All rights reserved.</p> <div class="footer_links"> <a href="https://discord.gg/KzeHDrgwAz" target="_blank" rel="noopener noreferrer">Discord</a> <a href="https://x.com/PythonHaru" target="_blank" rel="noopener noreferrer">X</a> <a href="https://github.com/disnana/DictSQLite" target="_blank" rel="noopener noreferrer">GitHub</a> </div> </footer> </body></html>
