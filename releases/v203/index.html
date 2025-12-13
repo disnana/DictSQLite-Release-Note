@@ -1,0 +1,121 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><!-- Page Metadata --><link rel="canonical" href="https://disnana.github.io/DictSQLite-Release-Note/releases/v203/"><meta name="description" content="非同期データベースロック問題の修正とキューベース操作実装"><!-- OpenGraph Tags --><meta property="og:title" content="DictSQLite v2.0.3"><meta property="og:type" content="website"><meta property="og:url" content="https://disnana.github.io/DictSQLite-Release-Note/releases/v203/"><meta property="og:locale" content="en"><meta property="og:description" content="非同期データベースロック問題の修正とキューベース操作実装"><meta property="og:site_name" content="DictSQLite"><meta property="og:image" content="/DictSQLite-Release-Note/assets/starlog-placeholder-2.Dx_N7jU4.jpg"><meta property="og:image:alt" content="Astro ロゴ全体"><!-- Twitter Tags --><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site"><meta name="twitter:title" content="DictSQLite v2.0.3"><meta name="twitter:description" content="非同期データベースロック問題の修正とキューベース操作実装"><meta name="twitter:image" content="/DictSQLite-Release-Note/assets/starlog-placeholder-2.Dx_N7jU4.jpg"><meta name="twitter:image:alt" content="Astro ロゴ全体"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Source+Code+Pro&display=swap" rel="stylesheet"><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="animate"><script type="module" src="/DictSQLite-Release-Note/assets/ClientRouter.astro_astro_type_script_index_0_lang.QW52Ox2j.js"></script><link rel="stylesheet" href="/DictSQLite-Release-Note/assets/index.WEhioEny.css">
+<style>time[data-astro-cid-baakmyjh]{display:block}@keyframes astroFadeInOut{0%{opacity:1}to{opacity:0}}@keyframes astroFadeIn{0%{opacity:0;mix-blend-mode:plus-lighter}to{opacity:1;mix-blend-mode:plus-lighter}}@keyframes astroFadeOut{0%{opacity:1;mix-blend-mode:plus-lighter}to{opacity:0;mix-blend-mode:plus-lighter}}@keyframes astroSlideFromRight{0%{transform:translate(100%)}}@keyframes astroSlideFromLeft{0%{transform:translate(-100%)}}@keyframes astroSlideToRight{to{transform:translate(100%)}}@keyframes astroSlideToLeft{to{transform:translate(-100%)}}@media (prefers-reduced-motion){::view-transition-group(*),::view-transition-old(*),::view-transition-new(*){animation:none!important}[data-astro-transition-scope]{animation:none!important}}
+</style><style>[data-astro-transition-scope="astro-jpx3f7vy-1"] { view-transition-name: post; }@layer astro { ::view-transition-old(post) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }::view-transition-new(post) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back]::view-transition-old(post) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back]::view-transition-new(post) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; } }[data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-jpx3f7vy-1"],
+			[data-astro-transition-fallback="old"][data-astro-transition-scope="astro-jpx3f7vy-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-jpx3f7vy-1"],
+			[data-astro-transition-fallback="new"][data-astro-transition-scope="astro-jpx3f7vy-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back][data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-jpx3f7vy-1"],
+			[data-astro-transition=back][data-astro-transition-fallback="old"][data-astro-transition-scope="astro-jpx3f7vy-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back][data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-jpx3f7vy-1"],
+			[data-astro-transition=back][data-astro-transition-fallback="new"][data-astro-transition-scope="astro-jpx3f7vy-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }</style></head><body> <div class="glow"></div> <header data-astro-cid-3ef6ksr2> <nav data-astro-cid-3ef6ksr2> <h2 id="site_title" data-astro-cid-3ef6ksr2> <a href="/" data-astro-cid-3ef6ksr2> <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" data-astro-cid-3ef6ksr2><path fill="url(#a)" fill-rule="evenodd" d="M.654 3.276C0 4.56 0 6.24 0 9.6v4.8c0 3.36 0 5.04.654 6.324a6 6 0 0 0 2.622 2.622C4.56 24 6.24 24 9.6 24h4.8c3.36 0 5.04 0 6.324-.654a6 6 0 0 0 2.622-2.622C24 19.44 24 17.76 24 14.4V9.6c0-3.36 0-5.04-.654-6.324A6 6 0 0 0 20.724.654C19.44 0 17.76 0 14.4 0H9.6C6.24 0 4.56 0 3.276.654A6 6 0 0 0 .654 3.276Zm10.875 16.41a.5.5 0 0 0 .942 0l.628-1.754a8 8 0 0 1 4.833-4.833l1.754-.628a.5.5 0 0 0 0-.942l-1.754-.628A8 8 0 0 1 13.1 6.068l-.628-1.754a.5.5 0 0 0-.942 0l-.628 1.754A8 8 0 0 1 6.068 10.9l-1.754.628a.5.5 0 0 0 0 .942l1.754.628a8 8 0 0 1 4.833 4.833l.628 1.754Z" clip-rule="evenodd" data-astro-cid-3ef6ksr2></path><path stroke="url(#b)" stroke-opacity=".5" stroke-width=".5" d="M.25 9.6c0-1.684 0-2.932.08-3.92.081-.985.24-1.69.547-2.29A5.75 5.75 0 0 1 3.39.877C3.99.57 4.695.41 5.68.33 6.668.25 7.916.25 9.6.25h4.8c1.684 0 2.932 0 3.92.08.985.081 1.69.24 2.29.547a5.75 5.75 0 0 1 2.513 2.513c.306.6.466 1.305.546 2.29.08.988.081 2.236.081 3.92v4.8c0 1.684 0 2.932-.08 3.92-.081.985-.24 1.69-.547 2.29a5.75 5.75 0 0 1-2.513 2.513c-.6.306-1.305.466-2.29.546-.988.08-2.236.081-3.92.081H9.6c-1.684 0-2.932 0-3.92-.08-.985-.081-1.69-.24-2.29-.547A5.75 5.75 0 0 1 .877 20.61C.57 20.01.41 19.305.33 18.32.25 17.332.25 16.084.25 14.4V9.6Zm11.044 10.17c.237.663 1.175.663 1.412 0l.628-1.753a7.75 7.75 0 0 1 4.683-4.683l1.753-.628c.663-.237.663-1.175 0-1.412l-1.753-.628a7.75 7.75 0 0 1-4.683-4.683l-.628-1.753c-.237-.663-1.175-.663-1.412 0l-.628 1.753a7.75 7.75 0 0 1-4.683 4.683l-1.753.628c-.663.237-.663 1.175 0 1.412l1.753.628a7.75 7.75 0 0 1 4.683 4.683l.628 1.753Z" data-astro-cid-3ef6ksr2></path><defs data-astro-cid-3ef6ksr2><radialGradient id="a" cx="0" cy="0" r="1" gradientTransform="rotate(-40.136 32.164 11.75) scale(33.3542)" gradientUnits="userSpaceOnUse" data-astro-cid-3ef6ksr2><stop offset=".639" stop-color="#9818E7" data-astro-cid-3ef6ksr2></stop><stop offset="1" stop-color="#DF7F4F" data-astro-cid-3ef6ksr2></stop></radialGradient><linearGradient id="b" x1="12" x2="12" y1="0" y2="24" gradientUnits="userSpaceOnUse" data-astro-cid-3ef6ksr2><stop stop-color="#fff" data-astro-cid-3ef6ksr2></stop><stop offset="1" stop-color="#fff" stop-opacity="0" data-astro-cid-3ef6ksr2></stop></linearGradient></defs></svg> DictSQLite </a> </h2> <div class="links" data-astro-cid-3ef6ksr2> <a href="mailto:support@disnana.com" data-astro-cid-3ef6ksr2>お問い合わせ</a> </div> </nav> </header>  <div class="post single" data-astro-transition-persist="post" data-astro-transition-scope="astro-jpx3f7vy-1"> <div class="version_wrapper"> <div class="version_info"> <div class="version_number">2.0.3</div> <time datetime="2025-10-25T00:00:00.000Z" class="date astro-baakmyjh" data-astro-cid-baakmyjh> Oct 25, 2025 </time>  </div> </div> <div class="content">  <h1 id="dictsqlite-v203">DictSQLite v2.0.3</h1>
+<p><strong>リリース日</strong>: 2025年10月25日<br>
+<strong>タイプ</strong>: パッチリリース（重要な修正）</p>
+<h2 id="-重要な修正">🐛 重要な修正</h2>
+<h3 id="データベースロック問題の解決">データベースロック問題の解決</h3>
+<p>v2.0.2以前のバージョンで発生していた深刻なデータベースロック問題を修正しました。</p>
+<p><strong>問題の内容</strong>:</p>
+<ul>
+<li>並行操作時に <code>apsw.BusyError: database is locked</code> エラーが頻発</li>
+<li>バルク操作（bulk_insert, bulk_get）が使用不可能</li>
+<li>高並行シナリオでの不安定性</li>
+</ul>
+<p><strong>根本原因</strong>:</p>
+<ol>
+<li>不適切なExecutor管理により複数スレッドが同一データベースにアクセス</li>
+<li>EXCLUSIVEロックモードにより並行接続が阻害される</li>
+<li>自動フラッシュとバルク操作の競合</li>
+</ol>
+<h3 id="実装された解決策">実装された解決策</h3>
+<p><strong>1. キューベースの操作シリアライゼーション</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#6A737D"># 全てのデータベース操作をasyncio.Queueでシリアライズ</span></span>
+<span class="line"><span style="color:#79B8FF">self</span><span style="color:#E1E4E8">._operation_queue </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> asyncio.Queue()</span></span>
+<span class="line"><span style="color:#79B8FF">self</span><span style="color:#E1E4E8">._worker_task </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> asyncio.create_task(</span><span style="color:#79B8FF">self</span><span style="color:#E1E4E8">._process_operations())</span></span></code></pre>
+<p><strong>2. 永続的なThreadPoolExecutor</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#6A737D"># 単一スレッドの永続的Executorで同一スレッドローカル接続を使用</span></span>
+<span class="line"><span style="color:#79B8FF">self</span><span style="color:#E1E4E8">._executor </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> ThreadPoolExecutor(</span><span style="color:#FFAB70">max_workers</span><span style="color:#F97583">=</span><span style="color:#79B8FF">1</span><span style="color:#E1E4E8">)</span></span></code></pre>
+<p><strong>3. NORMALロックモード</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#6A737D"># 複数接続の共存を許可</span></span>
+<span class="line"><span style="color:#9ECBFF">'locking_mode'</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">'NORMAL'</span><span style="color:#6A737D">  # EXCLUSIVEから変更</span></span></code></pre>
+<p><strong>4. 自動フラッシュの無効化</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#6A737D"># 書き込みバッファの自動フラッシュを無効化、明示的なaflush()のみ許可</span></span>
+<span class="line"><span style="color:#79B8FF">self</span><span style="color:#E1E4E8">._sync_db._write_buffer.flush_threshold </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> 1000000</span></span></code></pre>
+<h2 id="-パフォーマンス">📊 パフォーマンス</h2>
+<p>修正後のベンチマーク結果:</p>
+<ul>
+<li>50件の並行書き込み: 10,027 ops/s ✅</li>
+<li>50件の並行読み込み: 145,345 ops/s ✅</li>
+<li>100件の混合操作: 21,707 ops/s ✅</li>
+<li>200件のバルク挿入: 133,580 ops/s ✅</li>
+<li>300件の高並行: 12,974 ops/s ✅</li>
+<li>キャッシュヒット率: 80.0%</li>
+</ul>
+<h2 id="-改善点">🔧 改善点</h2>
+<h3 id="並行処理の安定性">並行処理の安定性</h3>
+<ul>
+<li>全28件の既存テストがパス</li>
+<li>7件の新しいストレステストを追加し、全てパス</li>
+<li>高負荷環境での安定動作を確認</li>
+</ul>
+<h3 id="テスト範囲の拡大">テスト範囲の拡大</h3>
+<p>追加されたストレステスト:</p>
+<ul>
+<li>並行書き込み（100操作）</li>
+<li>並行読み込み（100操作）</li>
+<li>混合操作（200操作）</li>
+<li>並行バルク操作（10 × 100アイテム）</li>
+<li>高並行（500操作）</li>
+<li>並行削除（50操作）</li>
+<li>フラッシュを伴う並行操作（100操作）</li>
+</ul>
+<h2 id="-互換性">📖 互換性</h2>
+<ul>
+<li>Python 3.9以上</li>
+<li>v2.0.0～v2.0.2との完全な互換性を維持</li>
+<li>既存のコードは変更不要で動作</li>
+</ul>
+<h2 id="-使用方法">📝 使用方法</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> asyncio</span></span>
+<span class="line"><span style="color:#F97583">from</span><span style="color:#E1E4E8"> dictsqlite </span><span style="color:#F97583">import</span><span style="color:#E1E4E8"> AsyncDictSQLite</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">async</span><span style="color:#F97583"> def</span><span style="color:#B392F0"> example</span><span style="color:#E1E4E8">():</span></span>
+<span class="line"><span style="color:#F97583">    async</span><span style="color:#F97583"> with</span><span style="color:#E1E4E8"> AsyncDictSQLite(</span><span style="color:#9ECBFF">'data.db'</span><span style="color:#E1E4E8">) </span><span style="color:#F97583">as</span><span style="color:#E1E4E8"> db:</span></span>
+<span class="line"><span style="color:#6A737D">        # 並行操作が安定して動作</span></span>
+<span class="line"><span style="color:#E1E4E8">        tasks </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> [db.aset(</span><span style="color:#F97583">f</span><span style="color:#9ECBFF">'key_</span><span style="color:#79B8FF">{</span><span style="color:#E1E4E8">i</span><span style="color:#79B8FF">}</span><span style="color:#9ECBFF">'</span><span style="color:#E1E4E8">, </span><span style="color:#F97583">f</span><span style="color:#9ECBFF">'value_</span><span style="color:#79B8FF">{</span><span style="color:#E1E4E8">i</span><span style="color:#79B8FF">}</span><span style="color:#9ECBFF">'</span><span style="color:#E1E4E8">) </span><span style="color:#F97583">for</span><span style="color:#E1E4E8"> i </span><span style="color:#F97583">in</span><span style="color:#79B8FF"> range</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">100</span><span style="color:#E1E4E8">)]</span></span>
+<span class="line"><span style="color:#F97583">        await</span><span style="color:#E1E4E8"> asyncio.gather(</span><span style="color:#F97583">*</span><span style="color:#E1E4E8">tasks)</span></span>
+<span class="line"><span style="color:#E1E4E8">        </span></span>
+<span class="line"><span style="color:#6A737D">        # バルク操作も問題なく動作</span></span>
+<span class="line"><span style="color:#E1E4E8">        data </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> {</span><span style="color:#F97583">f</span><span style="color:#9ECBFF">'bulk_</span><span style="color:#79B8FF">{</span><span style="color:#E1E4E8">i</span><span style="color:#79B8FF">}</span><span style="color:#9ECBFF">'</span><span style="color:#E1E4E8">: </span><span style="color:#F97583">f</span><span style="color:#9ECBFF">'value_</span><span style="color:#79B8FF">{</span><span style="color:#E1E4E8">i</span><span style="color:#79B8FF">}</span><span style="color:#9ECBFF">'</span><span style="color:#F97583"> for</span><span style="color:#E1E4E8"> i </span><span style="color:#F97583">in</span><span style="color:#79B8FF"> range</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">100</span><span style="color:#E1E4E8">)}</span></span>
+<span class="line"><span style="color:#F97583">        await</span><span style="color:#E1E4E8"> db.abulk_insert(data)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">asyncio.run(example())</span></span></code></pre>
+<h2 id="️-重要な注意事項">⚠️ 重要な注意事項</h2>
+<p>非同期機能を使用している場合は、v2.0.3へのアップグレードを強く推奨します。このバージョンではデータベースロック問題が完全に解決されています。</p>  </div> </div> <footer> <p>© 2025 Disnana. All rights reserved.</p> <div class="footer_links"> <a href="https://discord.gg/KzeHDrgwAz" target="_blank" rel="noopener noreferrer">Discord</a> <a href="https://x.com/PythonHaru" target="_blank" rel="noopener noreferrer">X</a> <a href="https://github.com/disnana/DictSQLite" target="_blank" rel="noopener noreferrer">GitHub</a> </div> </footer> </body></html>

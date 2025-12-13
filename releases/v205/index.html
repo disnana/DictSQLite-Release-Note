@@ -1,0 +1,136 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><!-- Page Metadata --><link rel="canonical" href="https://disnana.github.io/DictSQLite-Release-Note/releases/v205/"><meta name="description" content="依存関係の更新とPython 3.13対応の準備"><!-- OpenGraph Tags --><meta property="og:title" content="DictSQLite v2.0.5"><meta property="og:type" content="website"><meta property="og:url" content="https://disnana.github.io/DictSQLite-Release-Note/releases/v205/"><meta property="og:locale" content="en"><meta property="og:description" content="依存関係の更新とPython 3.13対応の準備"><meta property="og:site_name" content="DictSQLite"><meta property="og:image" content="/DictSQLite-Release-Note/assets/starlog-placeholder-2.Dx_N7jU4.jpg"><meta property="og:image:alt" content="Astro ロゴ全体"><!-- Twitter Tags --><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site"><meta name="twitter:title" content="DictSQLite v2.0.5"><meta name="twitter:description" content="依存関係の更新とPython 3.13対応の準備"><meta name="twitter:image" content="/DictSQLite-Release-Note/assets/starlog-placeholder-2.Dx_N7jU4.jpg"><meta name="twitter:image:alt" content="Astro ロゴ全体"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Source+Code+Pro&display=swap" rel="stylesheet"><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="animate"><script type="module" src="/DictSQLite-Release-Note/assets/ClientRouter.astro_astro_type_script_index_0_lang.QW52Ox2j.js"></script><link rel="stylesheet" href="/DictSQLite-Release-Note/assets/index.WEhioEny.css">
+<style>time[data-astro-cid-baakmyjh]{display:block}@keyframes astroFadeInOut{0%{opacity:1}to{opacity:0}}@keyframes astroFadeIn{0%{opacity:0;mix-blend-mode:plus-lighter}to{opacity:1;mix-blend-mode:plus-lighter}}@keyframes astroFadeOut{0%{opacity:1;mix-blend-mode:plus-lighter}to{opacity:0;mix-blend-mode:plus-lighter}}@keyframes astroSlideFromRight{0%{transform:translate(100%)}}@keyframes astroSlideFromLeft{0%{transform:translate(-100%)}}@keyframes astroSlideToRight{to{transform:translate(100%)}}@keyframes astroSlideToLeft{to{transform:translate(-100%)}}@media (prefers-reduced-motion){::view-transition-group(*),::view-transition-old(*),::view-transition-new(*){animation:none!important}[data-astro-transition-scope]{animation:none!important}}
+</style><style>[data-astro-transition-scope="astro-jpx3f7vy-1"] { view-transition-name: post; }@layer astro { ::view-transition-old(post) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }::view-transition-new(post) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back]::view-transition-old(post) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back]::view-transition-new(post) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; } }[data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-jpx3f7vy-1"],
+			[data-astro-transition-fallback="old"][data-astro-transition-scope="astro-jpx3f7vy-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-jpx3f7vy-1"],
+			[data-astro-transition-fallback="new"][data-astro-transition-scope="astro-jpx3f7vy-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back][data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-jpx3f7vy-1"],
+			[data-astro-transition=back][data-astro-transition-fallback="old"][data-astro-transition-scope="astro-jpx3f7vy-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back][data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-jpx3f7vy-1"],
+			[data-astro-transition=back][data-astro-transition-fallback="new"][data-astro-transition-scope="astro-jpx3f7vy-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }</style></head><body> <div class="glow"></div> <header data-astro-cid-3ef6ksr2> <nav data-astro-cid-3ef6ksr2> <h2 id="site_title" data-astro-cid-3ef6ksr2> <a href="/" data-astro-cid-3ef6ksr2> <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" data-astro-cid-3ef6ksr2><path fill="url(#a)" fill-rule="evenodd" d="M.654 3.276C0 4.56 0 6.24 0 9.6v4.8c0 3.36 0 5.04.654 6.324a6 6 0 0 0 2.622 2.622C4.56 24 6.24 24 9.6 24h4.8c3.36 0 5.04 0 6.324-.654a6 6 0 0 0 2.622-2.622C24 19.44 24 17.76 24 14.4V9.6c0-3.36 0-5.04-.654-6.324A6 6 0 0 0 20.724.654C19.44 0 17.76 0 14.4 0H9.6C6.24 0 4.56 0 3.276.654A6 6 0 0 0 .654 3.276Zm10.875 16.41a.5.5 0 0 0 .942 0l.628-1.754a8 8 0 0 1 4.833-4.833l1.754-.628a.5.5 0 0 0 0-.942l-1.754-.628A8 8 0 0 1 13.1 6.068l-.628-1.754a.5.5 0 0 0-.942 0l-.628 1.754A8 8 0 0 1 6.068 10.9l-1.754.628a.5.5 0 0 0 0 .942l1.754.628a8 8 0 0 1 4.833 4.833l.628 1.754Z" clip-rule="evenodd" data-astro-cid-3ef6ksr2></path><path stroke="url(#b)" stroke-opacity=".5" stroke-width=".5" d="M.25 9.6c0-1.684 0-2.932.08-3.92.081-.985.24-1.69.547-2.29A5.75 5.75 0 0 1 3.39.877C3.99.57 4.695.41 5.68.33 6.668.25 7.916.25 9.6.25h4.8c1.684 0 2.932 0 3.92.08.985.081 1.69.24 2.29.547a5.75 5.75 0 0 1 2.513 2.513c.306.6.466 1.305.546 2.29.08.988.081 2.236.081 3.92v4.8c0 1.684 0 2.932-.08 3.92-.081.985-.24 1.69-.547 2.29a5.75 5.75 0 0 1-2.513 2.513c-.6.306-1.305.466-2.29.546-.988.08-2.236.081-3.92.081H9.6c-1.684 0-2.932 0-3.92-.08-.985-.081-1.69-.24-2.29-.547A5.75 5.75 0 0 1 .877 20.61C.57 20.01.41 19.305.33 18.32.25 17.332.25 16.084.25 14.4V9.6Zm11.044 10.17c.237.663 1.175.663 1.412 0l.628-1.753a7.75 7.75 0 0 1 4.683-4.683l1.753-.628c.663-.237.663-1.175 0-1.412l-1.753-.628a7.75 7.75 0 0 1-4.683-4.683l-.628-1.753c-.237-.663-1.175-.663-1.412 0l-.628 1.753a7.75 7.75 0 0 1-4.683 4.683l-1.753.628c-.663.237-.663 1.175 0 1.412l1.753.628a7.75 7.75 0 0 1 4.683 4.683l.628 1.753Z" data-astro-cid-3ef6ksr2></path><defs data-astro-cid-3ef6ksr2><radialGradient id="a" cx="0" cy="0" r="1" gradientTransform="rotate(-40.136 32.164 11.75) scale(33.3542)" gradientUnits="userSpaceOnUse" data-astro-cid-3ef6ksr2><stop offset=".639" stop-color="#9818E7" data-astro-cid-3ef6ksr2></stop><stop offset="1" stop-color="#DF7F4F" data-astro-cid-3ef6ksr2></stop></radialGradient><linearGradient id="b" x1="12" x2="12" y1="0" y2="24" gradientUnits="userSpaceOnUse" data-astro-cid-3ef6ksr2><stop stop-color="#fff" data-astro-cid-3ef6ksr2></stop><stop offset="1" stop-color="#fff" stop-opacity="0" data-astro-cid-3ef6ksr2></stop></linearGradient></defs></svg> DictSQLite </a> </h2> <div class="links" data-astro-cid-3ef6ksr2> <a href="mailto:support@disnana.com" data-astro-cid-3ef6ksr2>お問い合わせ</a> </div> </nav> </header>  <div class="post single" data-astro-transition-persist="post" data-astro-transition-scope="astro-jpx3f7vy-1"> <div class="version_wrapper"> <div class="version_info"> <div class="version_number">2.0.5</div> <time datetime="2025-11-15T00:00:00.000Z" class="date astro-baakmyjh" data-astro-cid-baakmyjh> Nov 15, 2025 </time>  </div> </div> <div class="content">  <h1 id="dictsqlite-v205">DictSQLite v2.0.5</h1>
+<p><strong>リリース日</strong>: 2025年11月15日<br>
+<strong>タイプ</strong>: マイナーリリース</p>
+<h2 id="-依存関係の更新">🔧 依存関係の更新</h2>
+<h3 id="python-バインディング">Python バインディング</h3>
+<ul>
+<li>pyo3を0.24.1から0.26へアップグレード</li>
+<li>より効率的なPython-Rust間のデータ変換を実現</li>
+<li>Python 3.13対応の準備</li>
+</ul>
+<h3 id="並行データ構造">並行データ構造</h3>
+<ul>
+<li>dashmapを5.5から6.0へアップグレード</li>
+<li>ロックフリーなHashMapのパフォーマンス改善</li>
+</ul>
+<h3 id="非同期ランタイム">非同期ランタイム</h3>
+<ul>
+<li>tokioを1.35から1.40へアップグレード</li>
+<li>非同期処理の効率向上</li>
+</ul>
+<h2 id="-パフォーマンス">📊 パフォーマンス</h2>
+<p>依存関係の更新により、以下のパフォーマンス向上を実現:</p>
+<ul>
+<li>Python-Rust間のデータ変換が約10%高速化</li>
+<li>並行アクセス時のロック競合が減少</li>
+<li>非同期処理のレイテンシが改善</li>
+</ul>
+<h2 id="-改善点">🔧 改善点</h2>
+<h3 id="ビルドプロセスの最適化">ビルドプロセスの最適化</h3>
+<ul>
+<li>より新しいコンパイラ最適化を活用</li>
+<li>ビルド時間の短縮</li>
+</ul>
+<h3 id="メモリ管理の改善">メモリ管理の改善</h3>
+<ul>
+<li>pyo3の新しいメモリ管理機能を活用</li>
+<li>より効率的なリファレンスカウンティング</li>
+</ul>
+<h2 id="-互換性">📖 互換性</h2>
+<ul>
+<li>Python 3.9以上（Python 3.13も動作確認済み）</li>
+<li>v2.0.0～v2.0.4との完全な互換性を維持</li>
+<li>既存のコードは変更不要</li>
+</ul>
+<h2 id="-技術的変更">📝 技術的変更</h2>
+<h3 id="主要な依存関係バージョン">主要な依存関係バージョン</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>パッケージ</th><th>v2.0.4</th><th>v2.0.5</th></tr></thead><tbody><tr><td>pyo3</td><td>0.24.1</td><td>0.26</td></tr><tr><td>dashmap</td><td>5.5</td><td>6.0</td></tr><tr><td>tokio</td><td>1.35</td><td>1.40</td></tr></tbody></table>
+<h3 id="api変更">API変更</h3>
+<p>Python APIには変更はありません。全てのコードが引き続き動作します。</p>
+<h2 id="-使用方法">🚀 使用方法</h2>
+<p>インストールまたはアップグレード:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">pip</span><span style="color:#9ECBFF"> install</span><span style="color:#79B8FF"> --upgrade</span><span style="color:#9ECBFF"> dictsqlite</span></span></code></pre>
+<p>既存のコードはそのまま動作します:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#F97583">from</span><span style="color:#E1E4E8"> dictsqlite </span><span style="color:#F97583">import</span><span style="color:#E1E4E8"> DictSQLite</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">db </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> DictSQLite(</span><span style="color:#9ECBFF">'data.db'</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#E1E4E8">db[</span><span style="color:#9ECBFF">'key'</span><span style="color:#E1E4E8">] </span><span style="color:#F97583">=</span><span style="color:#9ECBFF"> 'value'</span></span>
+<span class="line"><span style="color:#79B8FF">print</span><span style="color:#E1E4E8">(db[</span><span style="color:#9ECBFF">'key'</span><span style="color:#E1E4E8">])  </span><span style="color:#6A737D"># 'value'</span></span></code></pre>
+<h2 id="-ベンチマーク結果">📈 ベンチマーク結果</h2>
+<p>v2.0.4と比較したパフォーマンス:</p>
+<ul>
+<li>書き込み: 約5%向上</li>
+<li>読み込み: 約3%向上</li>
+<li>混合操作: 約8%向上</li>
+<li>並行操作: 約12%向上</li>
+</ul>
+<h2 id="-将来の展望">🔮 将来の展望</h2>
+<p>v2.0.5は安定性とパフォーマンスの改善に注力したリリースです。次のメジャーバージョンに向けて、以下の準備を進めています:</p>
+<ul>
+<li>Python 3.13の完全サポート</li>
+<li>さらなるパフォーマンス最適化</li>
+<li>新機能の検討</li>
+</ul>  </div> </div> <footer> <p>© 2025 Disnana. All rights reserved.</p> <div class="footer_links"> <a href="https://discord.gg/KzeHDrgwAz" target="_blank" rel="noopener noreferrer">Discord</a> <a href="https://x.com/PythonHaru" target="_blank" rel="noopener noreferrer">X</a> <a href="https://github.com/disnana/DictSQLite" target="_blank" rel="noopener noreferrer">GitHub</a> </div> </footer> </body></html>
